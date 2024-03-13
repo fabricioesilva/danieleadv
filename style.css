@@ -12,7 +12,7 @@
 }
 html {
     background-color: var(--cor-vinho);
-    max-width: 100vw;    
+    max-width: 100vw;
 }
 a {
     color: inherit;
@@ -40,13 +40,15 @@ section {
 .imgMedia {
     height: 25rem;
 }
+.imgMaior {
+    height: 35rem;
+}
 .flexColumn {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    /* text-align: center; */
 }
 .flexRow {
     display: flex;
@@ -89,8 +91,11 @@ section {
 .texto-padrao {
     font-size: 2rem;
 }
-.estreita {
+.estreito {
     max-width:890px
+}
+.largo {
+    max-width:1280px
 }
 .margem-media {
     margin: 1rem 0;
@@ -106,4 +111,28 @@ section {
 }
 .rounded {
     border-radius: 50%;
+}
+.margin-zero {
+    margin: 0;
+}
+.padding-zero {
+    padding: 0;
+}
+.risco {
+    display: block;
+    height: 6px;
+    width: 350px;
+    background-color: white;    
+}
+.recuo {
+    margin-left: 20px;
+}
+.block {
+    display: block;
+}
+.justificado {
+    text-align: justify;
+}
+.bold {
+    font-weight: 600;
 }
