@@ -8,7 +8,7 @@
     border:0;
     margin:0;
     box-sizing:border-box;  
-    text-align: center;
+    text-align: center;    
 }
 html {
     background-color: var(--cor-vinho);
@@ -19,7 +19,14 @@ a {
 }
 section {
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
+}
+footer {
+    margin: auto;
+    text-align: center;
+    min-height: 2rem;
+    color: white;
+    
 }
 .barra {
     margin: 10rem 0;
@@ -43,19 +50,27 @@ section {
 .imgMaior {
     height: 35rem;
 }
+.imsPequena {
+    height: 10rem;
+}
 .flexColumn {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     gap: 5rem;
 }
 .flexRow {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
+    flex-flow: row;
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
     gap: 2rem;
+}
+.flexItem {
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 .strecht {
     align-self: stretch;
@@ -79,10 +94,10 @@ section {
     font-size: 3.5rem;
 }
 .padding-medio {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 .placa {
-    width: 60rem;
+    width: 50rem;
     height: auto;
 }
 .link-normal {
@@ -135,4 +150,19 @@ section {
 }
 .bold {
     font-weight: 600;
+}
+.imgIcone {
+    height: 60px;
+}
+.imgIconeMedio {
+    height: 100px;
+}
+.centraliza-vertical {
+    align-items: center;
+}
+.esquerda-vertical {
+    align-items:flex-start;
+}
+.espalha-vertical {
+    justify-content: space-around;
 }
