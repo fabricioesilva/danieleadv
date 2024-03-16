@@ -166,7 +166,7 @@ section {
     flex-wrap: nowrap;
 }
 .width-fit {
-    width: 450px;
+    max-width: 450px;
 }
 .background-img {
     /* border: 20px outset var(--cor-vinho); */
@@ -231,7 +231,7 @@ footer div {
         height: 30px;
     }
     .imgMedia {
-        height: 10rem;
+        height: 15rem;
     }
     .clienteImg {
         height: 20rem;
