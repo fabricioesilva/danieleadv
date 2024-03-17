@@ -169,7 +169,7 @@ section {
     flex-wrap: nowrap;
 }
 .width-fit {
-    max-width: 450px;    
+    max-width: 450px; 
 }
 .background-img {
     background-image: url('../../media/background.jpg');
