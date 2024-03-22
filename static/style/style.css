@@ -22,7 +22,7 @@ a {
 section {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 .barra {
     margin: 10rem 0;
@@ -108,7 +108,7 @@ section {
     margin: 1rem 0;
 }
 .margin-bottom-maior {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 .text-align-left {
     text-align: left;
@@ -226,9 +226,6 @@ footer div{
     .placa {
         width: 20rem;
     }
-    .align-left-smscreen {
-        text-align: justify;
-    }
     .imgIcone {
         height: 30px;
     }
@@ -238,4 +235,19 @@ footer div{
     .clienteImg {
         height: 20rem;
     }
+    section {
+        padding: 1rem;
+    }
+    .rowToColumn {
+        flex-direction: column;
+    }
+}
+@media (max-width:350px) {
+    .width-fit {
+        max-width: 350px;
+    }
+    img.imgMedia {
+        max-width: 330px;
+        height: auto;
+    }    
 }
