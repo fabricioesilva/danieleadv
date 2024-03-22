@@ -108,7 +108,7 @@ section {
     margin: 1rem 0;
 }
 .margin-bottom-maior {
-    margin-bottom: 30rem;
+    margin-bottom: 10rem;
 }
 .text-align-left {
     text-align: left;
@@ -181,7 +181,7 @@ footer {
     width: 100%;
     height: auto;    
     background-color: rgba(24, 13, 16, 0.308);
-    min-height: 15rem;    
+    min-height: 5rem;    
 }
 footer div{
     color: #945668;
