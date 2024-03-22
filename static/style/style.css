@@ -251,4 +251,7 @@ footer div{
         justify-self: center;
         align-self: center;      
     }    
+    .clienteImg {
+        height: 20rem;
+    }
 }
