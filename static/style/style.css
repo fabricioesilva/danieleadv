@@ -242,12 +242,13 @@ footer div{
         flex-direction: column;
     }
 }
-@media (max-width:350px) {
+@media (max-width:390px) {
     .width-fit {
         max-width: 350px;
     }
-    img.imgMedia {
-        max-width: 330px;
-        height: auto;
+    .imgMedia {        
+        height: 13rem;  
+        justify-self: center;
+        align-self: center;      
     }    
 }
