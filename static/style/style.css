@@ -242,6 +242,26 @@ footer div{
         flex-direction: column;
     }
 }
+@media (max-width:620px) {
+    .imgMedia {        
+        height: 16rem;  
+        justify-self: center;
+        align-self: center;      
+    }    
+    .clienteImg {
+        height: 20rem;
+    }
+}
+@media (max-width:520px) {
+    .imgMedia {        
+        height: 15rem;  
+        justify-self: center;
+        align-self: center;      
+    }    
+    .clienteImg {
+        height: 20rem;
+    }
+}
 @media (max-width:390px) {
     .width-fit {
         max-width: 350px;
