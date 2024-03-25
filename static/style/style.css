@@ -11,7 +11,7 @@
 }
 html {
     background-color: var(--cor-vinho);
-    max-width: 100vw;
+    width: 100vw;
 }
 body {
     margin: 0 auto;    
@@ -230,10 +230,10 @@ footer div{
         height: 30px;
     }
     .imgMedia {
-        height: 22rem;
+        height: 19rem;
     }
     .clienteImg {
-        height: 20rem;
+        height: 19rem;
     }
     section {
         padding: 1rem;
