@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="" data-scroll="22">
+<html lang="pt-BR" class="" data-scroll="0">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,11 +42,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
   <link rel="manifest" href="media/favicon/site.webmanifest">
   <link rel="mask-icon" href="media/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
   <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
-  <link rel="stylesheet" href="/static/style/style.css">
+  <link rel="stylesheet" type="text/css" href="/static/style/style.css">
+  <link rel="stylesheet" type="text/css" href="/NEVOCLARA/stylesheet.css">
   
   <script type="text/javascript">
     window.onload = function(){
@@ -61,51 +62,68 @@
     </script>
 </head>
 <body>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <section id="" class="flexColumn l100p fundo-branco bkgTxt margin-top-maior">
-    <nav>
-      <ul class="">
-        <li><a class="hover-underline-animation" href="#quemSouEu">QUEM SOU EU</a></li>
-        <li><a class="hover-underline-animation" href="#filosofia">FILOSOFIA</a></li>
-        <li><a class="hover-underline-animation" href="#areaAtuacaço">ÁREA DE ATUAÇÃO</a></li>
-        <li><a class="hover-underline-animation" href="#contato">CONTATO</a></li>
-      </ul>
-      <p id="menuHamburger" class=""><a href=""><i class="fa-solid fa-bars fa-2xl"></i></a> </p>
-    </nav>    
-    <div class="flexColumn justify-content-center text-align-center">
-      <p class="l100p">
-        <img class="imgEntrada" src="media/logo2x.png" alt="Logotipo com as letras D, T e A.">
-      </p>
+  <section id="menuHamburger">
+    <p class=""><a href="javascript:abrirMenu()"><i class="fa-solid fa-bars fa-2xl"></i></a></p>
+  </section>
+  <section id="menuFechar">
+    <p class=""><a href="javascript:fecharMenu()"><i class="fa-solid fa-xmark"></i></a></p>
+  </section>
+  <section class="bkgTxt margin-top-maior">
+    <div id="sectionNavMenu" class="l100p">
+
+      <nav>
+        <span id="navMenuSmLogo"><img src="/media/LOGO_SMALL_CLIENTE.png" style="height: 10rem;" alt=""></span>
+        <ul id="listaMenu" class="">
+          <li><a class="hover-underline-animation" href="#quemSouEu">QUEM SOU EU</a></li>
+          <li><a class="hover-underline-animation" href="#filosofia">FILOSOFIA</a></li>
+          <li><a class="hover-underline-animation" href="#areaAtuacaço">ÁREA DE ATUAÇÃO</a></li>
+          <li><a class="hover-underline-animation" href="#contato">CONTATO</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flexColumn l100p fund-branco bkgxt principal">
+      <div class="flexColumn justify-content-center text-align-center centralizaVertical padding-maior margin-top-maior">
+        <p class="l100p">
+          <img class="imgEntrada" src="media/logo2x.png" alt="Logotipo com as letras D, T e A.">
+        </p>
+      </div>
+    </div>  
+  </section>
+<!-- 
+  <section id="arrowSection principal">
+    <div style="margin: 0 auto;">
+      <div class="arrowDown" style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+                bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite 0.15s;"></Div>
+      <div class="arrowDown" style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+                bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite;"></Div>
     </div>
   </section>
-<section>
-  <div style="margin: 0 auto;">
-    <div class="arrowDown" style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
-              bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite 0.15s;"></Div>
-    <div class="arrowDown" style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
-              bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite;"></Div>
-  </div>
-</section>
 
-<section class="l1280px" id="quemSouEu">
-  <div class="flexColumn flex-wrap barra text-align-center justify-content-center align-items-center">
-    <p class="cor-branca strecht capitalize fonte-padrao texto-gancho">QUEM SOU EU</p>  
-      <div class="flexRow flex-wrap justify-content-center">
-        <p class=""><img class="imgMedia radio sombra clienteImg" src="media/cliente.jpeg" alt="Foto de Daniele Torres Arguello" data-aos="fade-right"></p>
-        <p class="texto-padrao cor-branca padding-medio margem-media text-align-left" data-aos="fade-up">
-          Meu nome é Daniele Torres Arguello, sou advogada, especialista em Direito Imobiliário, Direito Civil, regularização de imóveis, usucapião, inventário, herança e planejamento patrimonial.
-        </p> 
-      </div>         
+  <section class="l1280px principal" id="quemSouEu">
+    <div class="flexColumn flex-wrap barra text-align-center justify-content-center align-items-center">
+      <p class="cor-branca strecht capitalize fonte-padrao texto-gancho">QUEM SOU EU</p>  
+        <div class="flexRow flex-wrap justify-content-center" data-aos="fade-right" data-aos-anchor-placement="top-center">
+          <p class=""><img class="imgMedia radio sombra clienteImg" src="media/cliente.jpeg" alt="Foto de Daniele Torres Arguello"></p>
+          <p class="texto-padrao cor-branca padding-medio margem-media text-align-left" data-aos="fade-up">
+            Meu nome é Daniele Torres Arguello, sou advogada, especialista em Direito Imobiliário, Direito Civil, regularização de imóveis, usucapião, inventário, herança e planejamento patrimonial.
+          </p> 
+        </div>         
+      </div>
+  </section>   -->
+
+<!-- 
+  <section class="l1280px principal">
+    <div class="flexColumn justify-content-center text-align-center">
+      <p class="cor-branca capitalize fonte-padrao texto-gancho">FILOSOFIA</p>
     </div>
-</section>  
+  </section> -->
 
-  <section class="l1280px" id="filosofia">
-      <div class="flexColumn flex-wrap barra text-align-center justify-content-center align-items-center" style="gap: 2rem;">
-        <p class="cor-branca strecht capitalize fonte-padrao texto-gancho">FILOSOFIA</p>
-        <!-- <p class="cor-branca fonte-padrao texto-medio"><span class="risco"></span>Saiba seus direitos <span class="risco"></span></p> -->
+  <!-- <section class="l1280px principal" id="filosofia">
+      <div class="flexColumn flex-wrap barra text-align-center justify-content-center align-items-center">        
         <p class="texto-padrao cor-branca justificado" data-aos="fade-up">
-          Com dedicação personalizada e ética, somos seus aliados jurídicos em que pode confiar.
+          Com dedicação personalizada e ética, somos seus aliados jurídicos em quem pode confiar.
         </p>
         <p class="texto-padrao cor-branca justificado" data-aos="fade-up">
           Aqui no escritório, vamos além do convencional, proporcionando soluções inteligentes e eficazes, especialmente pensadas para a resolução da sua demanda.
@@ -117,131 +135,189 @@
           Seja qual for a batalha que você enfrenta, estamos aqui para lutar ao seu lado e defender seus direitos com determinação, integridade e uma visão voltada para o sucesso. A busca pela justiça é nossa missão.
         </p>
       </div>
+  </section> -->
+
+  <!-- <section id="areaAtuacaço principal" class="l1280px">
+    <div class="flexColumn justify-content-center text-align-center">
+      <p class="cor-branca capitalize fonte-padrao texto-gancho">ÁREAS DE ATUAÇÃO</p>
+
+      <div class="flexRow flex-wrap justify-space-around barra">
+
+        <div class="flexColumn align-items-start justify-space-around">
+            <div class="flexRow flex-nowrap align-items-center align-items-start" style="justify-content:stretch;">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Civil</div>
+            </div>        
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Imobiliário</div>
+            </div>
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Regularização de Imóveis</div>
+            </div>
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Usucapião</div>
+            </div>          
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Família e Sucessões</div>
+            </div>
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Inventário e Herança</div>
+            </div>
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Planejamento Patrimonial</div>
+            </div>
+          </div>
+          <div class="flexColumn align-items-start">
+
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Responsabilidade Civil e Consumidor</div>
+            </div>
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Bancário</div>
+            </div>
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Renegociação de dívidas</div>
+            </div>
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Juros abusivos</div>
+            </div>
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Cartão de crédito, dívidas e etc</div>
+            </div>   
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="cor-branca texto-padrao" data-aos="zoon-in">Negativação ilegal</div>
+            </div>  
+          </div>
+
+      </div>
+    </div>
+  </section> -->
+  
+  
+  <section class="l1280px principal">
+    <div class="flexColumn justify-content-center text-align-center">
+      <p class="cor-branca capitalize fonte-padrao texto-gancho">CONTATO</p>
+    </div>
+  </section>
+  
+  <section id="contato" class="l1280px principal">
+    <div class="flexColumn flex-wrap barra justify-content-start" style="gap: 2rem;" data-aos="fade-up">
+      <div class="cor-branca texto-padrao">
+          <p>TESTE CONTEUDO</p>
+          <p>
+            <a class="sombra rounded" href="https://wa.me/5561992375871?text=Olá%20,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello." target="_blank">
+              <img class="imgIcone" src="../media/whatsapp.png" alt="Ícone do Whatsapp" /> 
+            </a>
+            <span>
+              (61) 99237-5871
+            </span>
+          </p>
+      </div>
+      <div class="cor-branca texto-padrao">
+          <p>
+            <a  class="sombra rounded" href="https://www.instagram.com/eudanieletorres/" target="_blank">
+              <img class="imgIcone" src="../media/instagram.png" alt="Ícone do Instagram"> 
+            </a>@eudanieletorres
+
+          </p>
+      </div>
+
+      <div class="cor-branca texto-padrao">
+        <p>
+          <a  class="sombra rounded" href="https://www.instagram.com/eudanieletorres/" target="_blank">
+            <img class="imgIcone" src="../media/emailicon.png" alt="Ícone do Instagram"> 
+          </a>daniele torres arguelloadv @gmail.com
+        </p>
+      </div>
+      <div class="cor-branca texto-padrao">
+        <p>
+          <span  class="sombra rounded">
+            <img class="imgIcone" src="../media/calendar.png" alt="Ícone do Instagram"> 
+          </span>Agende uma consultoria!
+        </p>
+      </div>
+    </div>
   </section>
 
-    <section id="areaAtuacaço" class="l1280px">
-      <div class="flexColumn justify-content-center text-align-center">
-        <p class="cor-branca capitalize fonte-padrao texto-gancho">ÁREAS DE ATUAÇÃO</p>
+  <section class="flexRow text-align-center justify-content-center margem-media margin-bottom-maior principal">      
+    <div class="margin-zero padding-zero width-fit background-img" data-aos="zoom-out">
+      <img class="imgMedia" src="media/logo2.png" alt="Logotipo com as letras D, T e A."> 
+    </div>
+  </section>
 
-        <div class="flexRow flex-wrap justify-space-around barra">
-    
-          <div class="flexColumn align-items-start justify-space-around">
-              <div class="flexRow flex-nowrap align-items-center align-items-start" style="justify-content:stretch;">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Civil</div>
-              </div>        
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Imobiliário</div>
-              </div>
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Regularização de Imóveis</div>
-              </div>
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Usucapião</div>
-              </div>          
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Família e Sucessões</div>
-              </div>
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Inventário e Herança</div>
-              </div>
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Planejamento Patrimonial</div>
-              </div>
-            </div>
-            <div class="flexColumn align-items-start">
-    
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Responsabilidade Civil e Consumidor</div>
-              </div>
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Bancário</div>
-              </div>
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Renegociação de dívidas</div>
-              </div>
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Juros abusivos</div>
-              </div>
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Cartão de crédito, dívidas e etc</div>
-              </div>   
-              <div class="flexRow flex-nowrap align-items-center align-items-start">
-                <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
-                <div class="cor-branca texto-padrao" data-aos="zoon-in">Negativação ilegal</div>
-              </div>  
-            </div>
-    
-        </div>
-      </div>
-    </section>
-  
-    <section id="contato" class="l1280px">
-      <div class="barra text-align-center">
-        <p class="cor-branca strecht capitalize fonte-padrao texto-gancho">CONTATO</p>  
-      </div>
-      <div class="flexColumn flex-wrap barra justify-content-start" style="gap: 2rem;">
-          <div class="cor-branca texto-padrao">
-            <p data-aos="fade-down">
-              <a class="sombra rounded" href="https://wa.me/5561992375871?text=Olá%20,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello." target="_blank">
-                <img class="imgIcone" src="../media/whatsapp.png" alt="Ícone do Whatsapp" /> 
-              </a>
-              <span>
-                (61) 99237-5871
-              </span>
-            </p>
-          </div>
-          <div class="cor-branca texto-padrao">
-            <p data-aos="fade-down">
-              <a  class="sombra rounded" href="https://www.instagram.com/eudanieletorres/" target="_blank">
-                <img class="imgIcone" src="../media/instagram.png" alt="Ícone do Instagram"> 
-              </a>@eudanieletorres
-            </p>
-        </div>
-        <div class="cor-branca texto-padrao">
-          <p data-aos="fade-down">
-            <a  class="sombra rounded" href="https://www.instagram.com/eudanieletorres/" target="_blank">
-              <img class="imgIcone" src="../media/emailicon.png" alt="Ícone do Instagram"> 
-            </a>danieletorresarguelloadv@gmail.com
-          </p>
-        </div>
-        <div class="cor-branca texto-padrao">
-          <p data-aos="fade-down">
-            <span  class="sombra rounded">
-              <img class="imgIcone" src="../media/calendar.png" alt="Ícone do Instagram"> 
-            </span>Agende uma consultoria!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="flexRow text-align-center justify-content-center margem-media margin-bottom-maior">      
-      <div class="margin-zero padding-zero width-fit background-img" data-aos="zoom-out">
-          <img class="imgMedia" src="media/logo2.png" alt="Logotipo com as letras D, T e A."> 
-        </div>
-    </section>
-    <footer class="flexRow cor-branca justify-content-center align-items-end">
-      <div>
-        <a href="mailto:fabreuesilva@gmail.com?subject=Quero um site&body=Olá, Fabrício Silva! Vi seu trabalho na internet, gostaria de fazer uma consulta para o meu negócio." class="link-normal">
-          <!-- Quero um site!s -->
-        </a>
-      </div>
-    </footer>
-  </body>
+  <footer class="flexRow cor-branca justify-content-center align-items-end principal">
+    <div>
+      <a href="mailto:fabreuesilva@gmail.com?subject=Quero um site&body=Olá, Fabrício Silva! Vi seu trabalho na internet, gostaria de fazer uma consulta para o meu negócio." class="link-normal">
+        <!-- Quero um site!s -->
+      </a>
+    </div>
+  </footer>
+</body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
-  <script type="text/javascript" src="static/js/custom.js"></script>   
   <script>
+    const menuHamburger = document.getElementById('menuHamburger');
+    const menuFechar = document.getElementById('menuFechar');
+    const listaPrincipal = document.getElementsByClassName('principal');    
+    const fecharAbrirCoteudo = (opcao='abrir')=> {
+      if(opcao=='fechar') {
+        Array.from(listaPrincipal).forEach((el) => {
+          el.style.display = 'none';
+        }); 
+      } else {
+        Array.from(listaPrincipal).forEach((el) => {
+          el.style.display = 'block';
+        });
+      }
+    }
+    const abrirMenu = () => {
+      fecharAbrirCoteudo('fechar');
+      menuHamburger.style.display = 'none';
+      menuFechar.style.display = 'block';
+      document.getElementById('sectionNavMenu').style.display = 'block';
+    }
+    const fecharMenu = () => {
+      fecharAbrirCoteudo();
+      menuHamburger.style.display = 'block';
+      menuFechar.style.display = 'none';
+      document.getElementById('sectionNavMenu').style.display = 'none';
+    }
+    const divs = document.querySelectorAll('.hover-underline-animation');
+
+    divs.forEach(el => el.addEventListener('click', event => {
+      fecharAbrirCoteudo();
+      document.getElementById('sectionNavMenu').style.display = 'none';
+      menuHamburger.style.display = 'block';
+      menuFechar.style.display = 'none';
+    }));
+    const ajustarMenu = () => {
+      if(window.innerWidth > 1130 ) {
+        document.getElementById('sectionNavMenu').style.display = 'block';
+        menuFechar.style.display = 'none';
+        menuHamburger.style.display = 'none';
+      } else {        
+        menuHamburger.style.display = 'block';
+        menuFechar.style.display = 'none';
+        document.getElementById('sectionNavMenu').style.display = 'none';
+      }
+      fecharAbrirCoteudo();
+    }
+    window.addEventListener('resize', function(event) {
+      ajustarMenu();
+    }, true);
+
     AOS.init();
   </script> 
+  <script type="text/javascript" src="static/js/custom.js"></script>   
 </html>

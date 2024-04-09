@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('NEVOCLARA/stylesheet.css');
+/* @import url('NEVOCLARA/stylesheet.css'); */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root {
     --cor-vinho: #2a181d;;
@@ -19,13 +19,16 @@ body {
     margin: 0 auto;    
 }
 nav {
-    display: flex;
+    display: flex;    
     width: 100vw;
     max-width: 1280px;
     margin: 1rem auto 0 auto;
     padding: 0.5rem;
-    flex: row;    
-    justify-content: center;    
+    flex-flow: column nowrap;
+    text-align: center;
+    align-items: center;
+    gap: 5rem;
+    /* justify-content:baseline;   */
 }
 nav ul {
     list-style-type: none;    
@@ -43,7 +46,12 @@ nav ul li a {
     font-size: 1.7rem;
     border-radius: 0.5rem;
 }
-
+#navMenuSmLogo {
+    display: none;
+    height: fit-content;   
+    width: fit-content; 
+    background-color: var(--vinho-branco);
+}
 .hover-underline-animation {
     display: inline-block;
     position: relative;
@@ -87,7 +95,7 @@ div .arrowDown {
         opacity: 0.7;
     }
 }
-html:not([data-scroll='0']) .arrowDown {
+html:not([data-scroll='0']) #arrowSection {
     display: none;
 }
 nav ul li a:hover {
@@ -95,15 +103,24 @@ nav ul li a:hover {
   }
 #menuHamburger {    
     display: none;
-    /* position: static; */    
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    padding: 1rem;
+    line-height: 2;
+    cursor: pointer;    
     border: 1px solid var(--vinho-branco);
     border-radius: 0.5rem;
-    /* margin-top: 0.5rem; */
-    padding: 1rem;
-    right: 10rem;
-    top: 10rem;
-    line-height: 2;
+}
+#menuFechar {
+    display: none;
+    position: absolute;
+    top: 0rem;
+    right: 1.5rem;
+    line-height: 0;
     cursor: pointer;
+    z-index: 999;
+    font-size: 3rem;
 }
 #menuHamburger:hover {
     background-color: var(--vinho-branco);
@@ -159,7 +176,10 @@ section {
 .flexColumn {
     display: flex;
     flex-direction:column;
-    gap: 5rem;
+    gap: 5rem;    
+}
+.padding-maior {
+    padding: 2rem;
 }
 .flexRow {
     display: flex;
@@ -301,6 +321,10 @@ footer {
 footer div{
     color: #945668;
 }
+.centralizaVertical {
+    position: relative;
+    top: 10%;
+}
 
 @media (max-width:1280px) {
     .flex-wrap {
@@ -323,8 +347,49 @@ footer div{
     .margin-top-sm {
         margin-top: 0.5rem;
     }
+    .imgEntrada {
+        height: 20rem;
+    } 
+}
+@media (max-width:1130px) {
+    #sectionNavMenu{        
+        display: none;
+        margin-top: 0;        
+    }    
+    nav {
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation: fade-in 2s;
+        z-index: 99;
+        background-color: var(--cor-vinho);
+        opacity: 1;
+        overflow-y: scroll;
+    }
+    nav ul {        
+        list-style-type:none;
+        padding-left: 0pt;
+        max-width: 30rem;            
+    }       
+    #listaMenu {
+        display: block;
+    }
+    #listaMenu li a {
+        color: aliceblue;        
+    }
+    #menuHamburger {
+        display: block;
+        z-index: 999;
+    }    
+    #navMenuSmLogo {
+        display: block;
+    }
 }
 @media (max-width:1080px) {
+    .bkgTxt {
+        height: auto;
+    }   
     .risco {
         width: 200px;  
     }
@@ -379,6 +444,9 @@ footer div{
     }
 }
 @media (max-width:390px) {
+    /* nav {
+        display: none;
+    } */
     .width-fit {
         max-width: 350px;
     }
@@ -390,4 +458,10 @@ footer div{
     .clienteImg {
         height: 23rem;
     }
+    .bkgTxt {
+        height: auto;
+    }   
+    .imgEntrada {
+        height: 10rem;
+    } 
 }
