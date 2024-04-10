@@ -117,7 +117,7 @@ nav ul li a:hover {
     width: 98%;
 }
 .imgEntrada {
-    height: 30rem;
+    height: 25rem;
 }
 a {
     color: inherit;
@@ -130,7 +130,7 @@ a {
     background-image: url('../../media/textura.png');
     background-clip: content-box;
     background-attachment: fixed;
-    height: 90vh;
+    height: 85vh;
 }
 section {    
     margin: 0 auto;
@@ -312,7 +312,7 @@ footer div{
 }
 .centralizaVertical {
     position: relative;
-    top: 10%;
+    top: 5%;
 }
 @keyframes scrolldown {
     0%{
@@ -338,7 +338,7 @@ footer div{
 }
 @media (max-height:1180px) {
     .minHeight {
-        min-height: 1000px;
+        min-height: 800px;
     }
 }
 @media (max-width:1280px) {
