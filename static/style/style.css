@@ -6,7 +6,7 @@
     --vinho-escuro:  rgba(24, 13, 16, 0.308);
     --vinho-branco: rgb(243, 176, 199);
 }
-*{
+*, *::before, *::after {
     border:0;
     margin:0;
     box-sizing:border-box;
@@ -50,7 +50,6 @@ nav ul li a {
     display: none;
     height: fit-content;   
     width: fit-content; 
-    background-color: var(--vinho-branco);
 }
 .hover-underline-animation {
     display: inline-block;
@@ -81,20 +80,6 @@ div .arrowDown {
     transform: translateY(0%) rotate(45deg);   
     opacity: 0;
 }
-@keyframes scrolldown {
-    0%{
-        transform: translateY(20%) rotate(45deg);
-        opacity: 0.7;
-    }
-    50%{
-        transform: translateY(0%) rotate(45deg);
-        opacity: 0.2;
-    }
-    100%{
-        transform: translateY(20%) rotate(45deg);
-        opacity: 0.7;
-    }
-}
 html:not([data-scroll='0']) #arrowSection {
     display: none;
 }
@@ -111,7 +96,13 @@ nav ul li a:hover {
     cursor: pointer;    
     border: 1px solid var(--vinho-branco);
     border-radius: 0.5rem;
+    background-color: var(--vinho-branco);
+    color: var(--cor-vinho);
 }
+/* #menuHamburger:hover {
+    background-color: var(--vinho-branco);
+    color: var(--cor-vinho);
+} */
 #menuFechar {
     display: none;
     position: absolute;
@@ -122,13 +113,8 @@ nav ul li a:hover {
     z-index: 999;
     font-size: 3rem;
 }
-#menuHamburger:hover {
-    background-color: var(--vinho-branco);
-    color: var(--cor-vinho);
-}
 .l100p {
-    width: 100%;
-    /* margin-top: 5rem; */
+    width: 98%;
 }
 .imgEntrada {
     height: 30rem;
@@ -144,7 +130,8 @@ a {
     background-image: url('../../media/textura.png');
     background-clip: content-box;
     background-attachment: fixed;
-    height: 80vh;    
+    /* height: 85vh; */
+    min-height: 200px;
 }
 section {    
     margin: 0 auto;
@@ -207,6 +194,9 @@ section {
 }
 .texto-gancho {
     font-size: 6.5rem;
+}
+.texto-gancho-md {
+    font-size: 3rem;
 }
 .texto-medio {
     font-size: 3.5rem;
@@ -325,7 +315,31 @@ footer div{
     position: relative;
     top: 10%;
 }
-
+.minHeight {
+    min-height: 50rem;
+}
+@keyframes scrolldown {
+    0%{
+        transform: translateY(20%) rotate(45deg);
+        opacity: 0.7;
+    }
+    50%{
+        transform: translateY(0%) rotate(45deg);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translateY(20%) rotate(45deg);
+        opacity: 0.7;
+    }
+}
+  @keyframes slidein {
+    from {
+      transform: translate(0px, -10px);
+    }  
+    to {
+    transform: translate(0px, 10px);
+    }
+  }
 @media (max-width:1280px) {
     .flex-wrap {
         flex-wrap: wrap;
@@ -339,7 +353,7 @@ footer div{
         margin-top: 2rem;
     }
     .barra {
-        margin: 5rem 0;
+        margin: 2rem 0;
     }
     .placa {
         width: 25rem;        
@@ -350,6 +364,12 @@ footer div{
     .imgEntrada {
         height: 20rem;
     } 
+    .minHeight {
+        min-height: 30rem;
+    }
+    .justify-flex-start-sm {
+        justify-content: flex-start;
+    }
 }
 @media (max-width:1130px) {
     #sectionNavMenu{        
@@ -366,6 +386,7 @@ footer div{
         background-color: var(--cor-vinho);
         opacity: 1;
         overflow-y: scroll;
+        z-index: 999;
     }
     nav ul {        
         list-style-type:none;
@@ -389,7 +410,7 @@ footer div{
 @media (max-width:1080px) {
     .bkgTxt {
         height: auto;
-    }   
+    }
     .risco {
         width: 200px;  
     }
@@ -422,6 +443,17 @@ footer div{
     .rowToColumn {
         flex-direction: column;
     }
+    .texto-padrao {
+        font-size: 1.6rem;
+    }
+    @keyframes slidein {
+        from {
+          transform: translate(0px, -8px);
+        }  
+        to {
+        transform: translate(0px, 8px);
+        }
+      }
 }
 @media (max-width:620px) {
     .imgMedia {        
@@ -431,6 +463,9 @@ footer div{
     }    
     .clienteImg {
         height: 20rem;
+    }
+    .texto-gancho-md {
+        font-size: 2rem;
     }
 }
 @media (max-width:520px) {
@@ -442,11 +477,22 @@ footer div{
     .clienteImg {
         height: 25rem;
     }
+    .texto-padrao {
+        font-size: 1.2rem;
+    }    
+    @keyframes slidein {
+        from {
+          transform: translate(0px, -6px);
+        }  
+        to {
+        transform: translate(0px, 6px);
+        }
+      }      
 }
 @media (max-width:390px) {
-    /* nav {
-        display: none;
-    } */
+    nav {
+        margin-top: 5rem;
+    }
     .width-fit {
         max-width: 350px;
     }
@@ -458,10 +504,13 @@ footer div{
     .clienteImg {
         height: 23rem;
     }
-    .bkgTxt {
+    /* .bkgTxt {
         height: auto;
-    }   
+    }    */
     .imgEntrada {
-        height: 10rem;
+        height: 9rem;
     } 
+    .minHeight {
+        min-height: 12rem;
+    }
 }

@@ -70,39 +70,49 @@
   <section id="menuFechar">
     <p class=""><a href="javascript:fecharMenu()"><i class="fa-solid fa-xmark"></i></a></p>
   </section>
-  <section class="bkgTxt margin-top-maior">
+  <section class="bkgTxt margin-top-maior minHeight">
     <div id="sectionNavMenu" class="l100p">
 
       <nav>
-        <span id="navMenuSmLogo"><img src="/media/LOGO_SMALL_CLIENTE.png" style="height: 10rem;" alt=""></span>
+        <span id="navMenuSmLogo" class="bkgTxt"><img src="/media/LOGO_SMALL_CLIENTE.png" style="height: 10rem;" alt=""></span>
         <ul id="listaMenu" class="">
           <li><a class="hover-underline-animation" href="#quemSouEu">QUEM SOU EU</a></li>
           <li><a class="hover-underline-animation" href="#filosofia">FILOSOFIA</a></li>
-          <li><a class="hover-underline-animation" href="#areaAtuacaço">ÁREA DE ATUAÇÃO</a></li>
+          <li><a class="hover-underline-animation" href="#areaAtuacao">ÁREA DE ATUAÇÃO</a></li>
           <li><a class="hover-underline-animation" href="#contato">CONTATO</a></li>
         </ul>
       </nav>
     </div>
-    <div class="flexColumn l100p fund-branco bkgxt principal">
-      <div class="flexColumn justify-content-center text-align-center centralizaVertical padding-maior margin-top-maior">
-        <p class="l100p">
-          <img class="imgEntrada" src="media/logo2x.png" alt="Logotipo com as letras D, T e A.">
+    <div class="flexColumn l100p fund-branco bkgxt principal justify-content-center text-align-center centralizaVertical padding-maior">
+        <p>
+          <img class="imgEntrada" src="media/logo2x.png" alt="Logotipo com as letras D, T e A." style="animation: slidein 1s infinite alternate 0.15s;">
         </p>
-      </div>
     </div>  
+    <div class="flexColumn l100p barra fund-branco bkgxt principal justify-content-center text-align-center centralizaVertical padding-maior">
+      <div class="texto-padrao cor-vinho">
+        <p style="animation: slidein 1s infinite alternate 0.15s;">
+          <span class="capitalize fonte-padrao texto-gancho-md">
+            <a class="" href="https://wa.me/5561992375871?text=Olá%20,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello." target="_blank">              
+              Entre em contato!
+            </a>
+          </span>
+        </p>
+      </div>    
+    </div>
   </section>
-<!-- 
-  <section id="arrowSection principal">
+  
+  <section id="arrowSection" class="">
     <div style="margin: 0 auto;">
-      <div class="arrowDown" style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+      <div class="arrowDown" style="width: 2em; height: 2em; background-color: transparent; 
                 bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite 0.15s;"></Div>
-      <div class="arrowDown" style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+      <div class="arrowDown" style="width: 2em; height: 2em; background-color: transparent;
                 bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite;"></Div>
     </div>
   </section>
 
-  <section class="l1280px principal" id="quemSouEu">
-    <div class="flexColumn flex-wrap barra text-align-center justify-content-center align-items-center">
+
+  <section class="l1280px" id="quemSouEu">
+    <div class="flexColumn flex-wrap barra text-align-center justify-content-center align-items-center principal">
       <p class="cor-branca strecht capitalize fonte-padrao texto-gancho">QUEM SOU EU</p>  
         <div class="flexRow flex-wrap justify-content-center" data-aos="fade-right" data-aos-anchor-placement="top-center">
           <p class=""><img class="imgMedia radio sombra clienteImg" src="media/cliente.jpeg" alt="Foto de Daniele Torres Arguello"></p>
@@ -111,17 +121,13 @@
           </p> 
         </div>         
       </div>
-  </section>   -->
+  </section>  
 
-<!-- 
-  <section class="l1280px principal">
-    <div class="flexColumn justify-content-center text-align-center">
+  <section class="l1280px" id="filosofia">
+    <div class="flexColumn justify-content-center text-align-center principal">
       <p class="cor-branca capitalize fonte-padrao texto-gancho">FILOSOFIA</p>
     </div>
-  </section> -->
-
-  <!-- <section class="l1280px principal" id="filosofia">
-      <div class="flexColumn flex-wrap barra text-align-center justify-content-center align-items-center">        
+      <div class="flexColumn flex-wrap barra text-align-center justify-content-center align-items-center principal">        
         <p class="texto-padrao cor-branca justificado" data-aos="fade-up">
           Com dedicação personalizada e ética, somos seus aliados jurídicos em quem pode confiar.
         </p>
@@ -135,87 +141,92 @@
           Seja qual for a batalha que você enfrenta, estamos aqui para lutar ao seu lado e defender seus direitos com determinação, integridade e uma visão voltada para o sucesso. A busca pela justiça é nossa missão.
         </p>
       </div>
-  </section> -->
+  </section>
 
-  <!-- <section id="areaAtuacaço principal" class="l1280px">
-    <div class="flexColumn justify-content-center text-align-center">
-      <p class="cor-branca capitalize fonte-padrao texto-gancho">ÁREAS DE ATUAÇÃO</p>
+  <section id="areaAtuacao" class="l1280px">
+    <div class="flexColumn justify-content-start principal">
 
-      <div class="flexRow flex-wrap justify-space-around barra">
+      <div class="flexColumn justify-content-center text-align-center">        
+        <p class="cor-branca capitalize fonte-padrao texto-gancho">ÁREAS DE ATUAÇÃO</p>
+      </div>
 
-        <div class="flexColumn align-items-start justify-space-around">
-            <div class="flexRow flex-nowrap align-items-center align-items-start" style="justify-content:stretch;">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+      <div class="flexRow flex-wrap barra justify-space-around justify-flex-start-sm">
+
+          <div class="flexColumn align-items-start">
+            <div class="flexRow flex-nowrap align-items-center align-items-start">
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Civil</div>
             </div>        
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Imobiliário</div>
             </div>
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Regularização de Imóveis</div>
             </div>
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Usucapião</div>
             </div>          
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Família e Sucessões</div>
             </div>
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Inventário e Herança</div>
             </div>
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Planejamento Patrimonial</div>
             </div>
           </div>
-          <div class="flexColumn align-items-start">
 
+          <div class="flexColumn align-items-start">
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>              
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Responsabilidade Civil e Consumidor</div>
             </div>
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Direito Bancário</div>
             </div>
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Renegociação de dívidas</div>
             </div>
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Juros abusivos</div>
             </div>
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>              
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Cartão de crédito, dívidas e etc</div>
             </div>   
             <div class="flexRow flex-nowrap align-items-center align-items-start">
-              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal" data-aos="zoom-in"></div>
+              <div class="flex-grow0 margin-top-sm"><img class="imgIcone" src="../media/tribunal.png" alt="Ícone de um tribunal"></div>
               <div class="cor-branca texto-padrao" data-aos="zoon-in">Negativação ilegal</div>
             </div>  
           </div>
 
       </div>
     </div>
-  </section> -->
-  
-  
-  <section class="l1280px principal">
-    <div class="flexColumn justify-content-center text-align-center">
-      <p class="cor-branca capitalize fonte-padrao texto-gancho">CONTATO</p>
-    </div>
   </section>
   
-  <section id="contato" class="l1280px principal">
-    <div class="flexColumn flex-wrap barra justify-content-start" style="gap: 2rem;" data-aos="fade-up">
+  <section id="contato" class="l1280px">
+    <div class="flexColumn flex-wrap barra justify-content-start principal" style="gap: 2rem;">
+      <div class="flexColumn justify-content-center text-align-center">
+        <p class="cor-branca capitalize fonte-padrao texto-gancho">Contato</p>
+      </div>
       <div class="cor-branca texto-padrao">
-          <p>TESTE CONTEUDO</p>
+        <p>
+          <span class="capitalize fonte-padrao texto-gancho-md">
+            Entre em contato!
+          </span>
+        </p>
+      </div>
+      <div class="cor-branca texto-padrao">
           <p>
             <a class="sombra rounded" href="https://wa.me/5561992375871?text=Olá%20,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello." target="_blank">
               <img class="imgIcone" src="../media/whatsapp.png" alt="Ícone do Whatsapp" /> 
@@ -229,25 +240,20 @@
           <p>
             <a  class="sombra rounded" href="https://www.instagram.com/eudanieletorres/" target="_blank">
               <img class="imgIcone" src="../media/instagram.png" alt="Ícone do Instagram"> 
-            </a>@eudanieletorres
+            </a>@eudaniele torres
 
           </p>
       </div>
 
       <div class="cor-branca texto-padrao">
         <p>
-          <a  class="sombra rounded" href="https://www.instagram.com/eudanieletorres/" target="_blank">
-            <img class="imgIcone" src="../media/emailicon.png" alt="Ícone do Instagram"> 
-          </a>daniele torres arguelloadv @gmail.com
+          <a  class="" href="https://www.instagram.com/eudanieletorres/" target="_blank">
+            <!-- <img class="imgIcone" src="../media/emailicon.png" alt="Ícone do Instagram"> -->
+            E-mail para contato: danieletorresarguelloadv@gmail.com
+          </a> 
         </p>
       </div>
-      <div class="cor-branca texto-padrao">
-        <p>
-          <span  class="sombra rounded">
-            <img class="imgIcone" src="../media/calendar.png" alt="Ícone do Instagram"> 
-          </span>Agende uma consultoria!
-        </p>
-      </div>
+
     </div>
   </section>
 
@@ -258,11 +264,11 @@
   </section>
 
   <footer class="flexRow cor-branca justify-content-center align-items-end principal">
-    <div>
+    <div></div>
+    <!-- <div>
       <a href="mailto:fabreuesilva@gmail.com?subject=Quero um site&body=Olá, Fabrício Silva! Vi seu trabalho na internet, gostaria de fazer uma consulta para o meu negócio." class="link-normal">
-        <!-- Quero um site!s -->
       </a>
-    </div>
+    </div> -->
   </footer>
 </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
@@ -273,11 +279,15 @@
     const fecharAbrirCoteudo = (opcao='abrir')=> {
       if(opcao=='fechar') {
         Array.from(listaPrincipal).forEach((el) => {
+          // el.style.visibility = 'hidden';
+          document.getElementById("arrowSection").style.visibility = 'hidden';
           el.style.display = 'none';
         }); 
       } else {
         Array.from(listaPrincipal).forEach((el) => {
-          el.style.display = 'block';
+          // el.style.visibility = 'visible';
+          document.getElementById("arrowSection").style.visibility = 'visible';
+          el.style.display = 'flex';
         });
       }
     }
@@ -286,19 +296,23 @@
       menuHamburger.style.display = 'none';
       menuFechar.style.display = 'block';
       document.getElementById('sectionNavMenu').style.display = 'block';
+      document.getElementsByClassName('whatsapp-btn')[0].style.visibility = 'hidden';
     }
     const fecharMenu = () => {
       fecharAbrirCoteudo();
       menuHamburger.style.display = 'block';
       menuFechar.style.display = 'none';
-      document.getElementById('sectionNavMenu').style.display = 'none';
+      document.getElementById('sectionNavMenu').style.display = 'none';   
+      document.getElementsByClassName('whatsapp-btn')[0].style.visibility = 'visible';
     }
     const divs = document.querySelectorAll('.hover-underline-animation');
 
     divs.forEach(el => el.addEventListener('click', event => {
       fecharAbrirCoteudo();
-      document.getElementById('sectionNavMenu').style.display = 'none';
-      menuHamburger.style.display = 'block';
+      if(window.innerWidth < 1130 ) {
+        document.getElementById('sectionNavMenu').style.display = 'none';
+        menuHamburger.style.display = 'block';
+      }
       menuFechar.style.display = 'none';
     }));
     const ajustarMenu = () => {
