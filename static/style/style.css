@@ -99,10 +99,6 @@ nav ul li a:hover {
     background-color: var(--vinho-branco);
     color: var(--cor-vinho);
 }
-/* #menuHamburger:hover {
-    background-color: var(--vinho-branco);
-    color: var(--cor-vinho);
-} */
 #menuFechar {
     display: none;
     position: absolute;
@@ -112,6 +108,7 @@ nav ul li a:hover {
     cursor: pointer;
     z-index: 999;
     font-size: 3rem;
+    color: var(--vinho-branco);
 }
 .l100p {
     width: 98%;
@@ -388,7 +385,7 @@ footer div{
         background-color: var(--cor-vinho);
         opacity: 1;
         overflow-y: scroll;
-        z-index: 999;
+        z-index: 99;
     }
     nav ul {        
         list-style-type:none;
