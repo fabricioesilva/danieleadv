@@ -110,9 +110,10 @@ nav ul li a:hover {
     font-size: 3rem;
     color: white;
 }
-.l100p {
+/* .l100p {
+    width: 100%;
     width: 98%;
-}
+} */
 .imgEntrada {
     height: 25rem;
 }
