@@ -492,7 +492,10 @@ footer div{
     }
     .texto-padrao {
         font-size: 1.2rem;
-    }    
+    }
+    .imgEntrada {
+        height: 11rem;
+    } 
     @keyframes slidein {
         from {
           transform: translate(0px, -6px);
