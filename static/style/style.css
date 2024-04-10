@@ -295,7 +295,10 @@ section {
     max-width: 450px; 
 }
 .background-img {
-    background-image: url('../../media/background.jpg');
+    background-image: url('../../media/texture_marble1.jpg');
+    background-repeat: repeat;
+    background-clip: content-box;
+    background-size: cover;
 }
 .align-items-end {
     align-items: flex-end;
