@@ -223,7 +223,7 @@ section {
     margin: 1rem 0;
 }
 .margin-top-maior {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .fundo-fosco {
     background-color: var(--vinho-escuro);
@@ -407,6 +407,9 @@ footer div{
     }    
     #navMenuSmLogo {
         display: block;
+    }
+    .margin-top-maior {
+        margin-top: 5rem;
     }
 }
 @media (max-width:1080px) {
