@@ -130,8 +130,7 @@ a {
     background-image: url('../../media/textura.png');
     background-clip: content-box;
     background-attachment: fixed;
-    /* height: 85vh; */
-    min-height: 200px;
+    height: 90vh;
 }
 section {    
     margin: 0 auto;
@@ -315,9 +314,6 @@ footer div{
     position: relative;
     top: 10%;
 }
-.minHeight {
-    min-height: 50rem;
-}
 @keyframes scrolldown {
     0%{
         transform: translateY(20%) rotate(45deg);
@@ -332,15 +328,24 @@ footer div{
         opacity: 0.7;
     }
 }
-  @keyframes slidein {
+@keyframes slidein {
     from {
-      transform: translate(0px, -10px);
+        transform: translate(0px, -10px);
     }  
     to {
     transform: translate(0px, 10px);
     }
-  }
+}
+@media (max-height:1180px) {
+    .minHeight {
+        min-height: 1000px;
+    }
+}
 @media (max-width:1280px) {
+    .minHeight {
+        min-height: 800px;
+        height: auto;
+    }
     .flex-wrap {
         flex-wrap: wrap;
     }
@@ -364,9 +369,6 @@ footer div{
     .imgEntrada {
         height: 20rem;
     } 
-    .minHeight {
-        min-height: 30rem;
-    }
     .justify-flex-start-sm {
         justify-content: flex-start;
     }
@@ -408,6 +410,10 @@ footer div{
     }
 }
 @media (max-width:1080px) {
+    .minHeight {
+        min-height: 200px;
+        height: auto;
+    }
     .bkgTxt {
         height: auto;
     }
@@ -446,6 +452,10 @@ footer div{
     .texto-padrao {
         font-size: 1.6rem;
     }
+    /* .minHeight {
+        min-height: 200px;
+        height: auto;
+    } */
     @keyframes slidein {
         from {
           transform: translate(0px, -8px);
@@ -504,9 +514,6 @@ footer div{
     .clienteImg {
         height: 23rem;
     }
-    /* .bkgTxt {
-        height: auto;
-    }    */
     .imgEntrada {
         height: 9rem;
     } 
