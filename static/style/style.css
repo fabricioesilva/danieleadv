@@ -96,7 +96,7 @@ nav ul li a:hover {
     cursor: pointer;    
     border: 1px solid var(--vinho-branco);
     border-radius: 0.5rem;
-    background-color: var(--vinho-branco);
+    background-color: white;
     color: var(--cor-vinho);
 }
 #menuFechar {
@@ -108,7 +108,7 @@ nav ul li a:hover {
     cursor: pointer;
     z-index: 999;
     font-size: 3rem;
-    color: var(--vinho-branco);
+    color: white;
 }
 .l100p {
     width: 98%;
@@ -124,9 +124,10 @@ a {
     max-width: 1280px;
 }
 .bkgTxt {
-    background-image: url('../../media/textura.png');
+    /* background-image: url('../../media/textura.png'); */
     background-clip: content-box;
     background-attachment: fixed;
+    /* background-color: rgb(255, 255, 255); */
     height: 85vh;
 }
 section {    
