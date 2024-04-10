@@ -138,7 +138,8 @@ section {
     margin: 6rem 0;
 }
 .fundo-branco {
-    background-color: white;
+    /* background-color: white; */
+    background-color: rgba(255, 255, 255, 1);
 }
 .titulo {
     font-family: "NEVOCLARA", sans-serif;
