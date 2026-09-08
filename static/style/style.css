@@ -128,13 +128,20 @@ a {
     /* background-image: url('../../media/textura.png'); */
     background-clip: content-box;
     background-attachment: fixed;
-    /* background-color: rgb(255, 255, 255); */
     height: 85vh;
 }
 section {    
     margin: 0 auto;
     padding: 1rem;
 }
+.planoInicial {
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255, 255, 255, 0.8)),
+                url('../../media/backoffice.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .barra {
     margin: 6rem 0;
 }
