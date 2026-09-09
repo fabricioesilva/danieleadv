@@ -24,16 +24,17 @@
   <meta property="og:image" content="http://danieletorresarguello.com.br/media/logo_cheio.jpg">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../media/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon/favicon-16x16.png">
-  <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../media/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../media/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../media/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../../media/favicon.ico">
 
   <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://unpkg.com">
 
   <!-- Google Analytics 4 (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRGP10D8G2"></script>
@@ -43,6 +44,10 @@
     gtag('js', new Date());
     gtag('config', 'G-NRGP10D8G2');
   </script>
+
+  <!-- Biblioteca de Animação AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="../../static/style/style.css">
 
   <style>
     /* RESET E PALETA DE CORES DA NOVA IDENTIDADE */
@@ -70,6 +75,7 @@
       background: var(--beige);
       color: var(--dark);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .container {
@@ -209,16 +215,14 @@
       margin-top: 40px;
       box-shadow: var(--shadow-soft);
     }
-    .profile-card img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--line);
-      flex-shrink: 0;
+    .profile-text h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 28px;
+      color: var(--burgundy);
+      margin-bottom: 8px;
     }
     .profile-text p {
-      font-size: 16px;
+      font-size: 15px;
       color: var(--dark);
       line-height: 1.7;
     }
@@ -336,17 +340,17 @@
         <span class="logo-mark"></span>
         <span>Daniele Torres Arguello</span>
       </a>
-      <a class="btn-header" href="https://wa.me/5561992375871?text=Olá,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+      <a class="btn-header" href="https://wa.me/5561992375871?text=Olá,%20Dra.%20Daniele!%20Gostaria%20de%20tirar%20dúvidas%20sobre%20Direito%20Bancário%20e%20Cartão%20de%20Crédito." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
     </div>
   </header>
 
   <main>
     <!-- HERO SECTION -->
     <section class="hero">
-      <div class="container">
+      <div class="container" data-aos="fade-down">
         <span class="eyebrow">Direito do Consumidor & Defesa Bancária</span>
         <h1>VOCÊ POSSUI CARTÃO DE CRÉDITO?</h1>
-        <p class="subtitle">Saiba seus direitos diante de abusos e cobranças indevidas</p>
+        <p class="subtitle">Saiba seus direitos diante de abusos, juros excessivos e cobranças indevidas</p>
       </div>
     </section>
 
@@ -354,17 +358,18 @@
     <section class="section">
       <div class="container">
         <div class="article-grid">
+          
           <!-- Coluna 1 -->
-          <div class="card-content">
+          <div class="card-content" data-aos="fade-right">
             <p>
               Se usado com responsabilidade, o cartão de crédito se torna um aliado valioso para organizar as finanças pessoais, mas é importante notar que as instituições financeiras têm a liberdade de decidir se concedem ou não um cartão de crédito a um cliente, por análise de limites de créditos, entre outros critérios. No entanto, uma vez que o cartão é adquirido pelo cliente, a instituição precisa observar e seguir uma série de deveres. O objetivo deste artigo é expor as principais práticas abusivas realizadas por bancos, vamos a elas:
             </p>
             
-            <img class="img-article" src="../media/foto12.jpg" alt="Casal preocupado com dívidas" loading="lazy">
+            <img class="img-article" src="../../media/foto12.jpg" alt="Casal preocupado com dívidas" loading="lazy">
             
             <p>
               <strong class="bold">Compras realizadas no exterior:</strong><br>
-              O Banco Central established que as operadoras de cartão de crédito deverão cobrar por compras feitas no exterior e a cotação da moeda estrangeira deve ser a do dia em que a compra foi processada. Se seu banco cobrar o câmbio do dia de fechamento da fatura, é possível contestar. A título de exemplo, os gastos feitos com cartão de crédito no exterior serão cobrados de acordo com a cotação do dólar equivalente ao dia, e não mais conforme a taxa de câmbio nos dias que antecedem o fechamento da fatura. A nova regra foi definida pelo Banco Central (BC) e deve evitar os sustos na hora de pagar as contas.
+              O Banco Central estabeleceu que as operadoras de cartão de crédito deverão cobrar por compras feitas no exterior e a cotação da moeda estrangeira deve ser a do dia em que a compra foi processada. Se seu banco cobrar o câmbio do dia de fechamento da fatura, é possível contestar. A título de exemplo, os gastos feitos com cartão de crédito no exterior serão cobrados de acordo com a cotação do dólar equivalente ao dia, e não mais conforme a taxa de câmbio nos dias que antecedem o fechamento da fatura. A nova regra foi definida pelo Banco Central (BC) e deve evitar os sustos na hora de pagar as contas.
             </p>
             
             <p>
@@ -374,7 +379,7 @@
           </div>
 
           <!-- Coluna 2 -->
-          <div class="card-content">
+          <div class="card-content" data-aos="fade-left">
             <p>
               <strong class="bold">Cobrança Indevida:</strong><br>
               Essa situação é bastante recorrente e pode se manifestar de várias formas. Se a cobrança foi identificada na fatura do cartão de crédito, é importante comunicar a administradora do cartão e requerer o reembolso. Caso seja comprovado que o valor foi cobrado indevidamente e, mesmo assim, o banco se recuse a efetuar o reembolso, a instituição pode ser obrigada a restituir o dobro do montante ao cliente. É possível, ainda, que ocorra a cobrança de valores que já foram devidamente quitados anteriormente.
@@ -384,7 +389,7 @@
               Para maior segurança, é aconselhável entrar em contato com a instituição financeira e verificar se há realmente uma relação com a empresa de cobrança e confirmar a autenticidade de boletos. Além disso, é muito importante verificar o extrato bancário regularmente para identificar possíveis cobranças indevidas, especialmente em caso de débito automático, como no caso de empréstimos consignados.
             </p>
             
-            <img class="img-article" src="../media/foto13.jpg" alt="Consumidor conversando com o gerente do banco" loading="lazy">
+            <img class="img-article" src="../../media/foto13.jpg" alt="Consumidor conversando com o gerente do banco" loading="lazy">
             
             <p>
               <strong class="bold">Busque seus direitos:</strong><br>
@@ -393,21 +398,28 @@
           </div>
         </div>
 
-        <!-- PERFIL DA ADVOGADA -->
-        <div class="profile-card">
-          <img src="../media/cliente.jpeg" alt="Daniele Torres Arguello" loading="lazy">
+        <!-- PERFIL DA ADVOGADA COM CONTEXTO REFORÇADO -->
+        <div class="profile-card" data-aos="fade-up">
+          <img src="../../media/cliente.jpeg" alt="Dra. Daniele Torres Arguello" loading="lazy" data-aos="zoom-in">
           <div class="profile-text">
-            <p><strong>Meu nome é Daniele Torres Arguello</strong>, sou advogada, especialista em Direito Imobiliário, Direito Civil, regularização de imóveis, usucapião, inventário, herança e planejamento patrimonial.</p>
+            <h2>Conheça a Advogada</h2>
+            <p>
+              <strong>Meu nome é Daniele Torres Arguello (OAB/DF 78.217)</strong>, advogada especialista em Direito Imobiliário, Direito Civil, Direito Bancário, Regularização de Imóveis, Usucapião, Inventário e Planejamento Patrimonial em Brasília – DF.
+            </p>
+            <p style="margin-top: 12px;">
+              <strong>Minha Atuação na Defesa do Consumidor Bancário:</strong><br>
+              Enfrentar grandes instituições financeiras exige conhecimento técnico acurado e estratégia focada na proteção do seu patrimônio. Meu compromisso é combater juros abusivos, cancelar cobranças indevidas, interromper negativações ilegais e buscar a devida restituição em dobro ou indenização quando seus direitos de consumidor forem violados por bancos e operadoras de cartão.
+            </p>
           </div>
         </div>
 
         <!-- CTAS DE CONTATO -->
-        <div class="cta-container">
-          <a class="btn-action btn-whatsapp" href="https://wa.me/5561992375871?text=Olá,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello." target="_blank" rel="noopener">
-            <img src="../media/whatsapp.png" alt="WhatsApp"> ENTRE EM CONTATO AGORA
+        <div class="cta-container" data-aos="fade-up">
+          <a class="btn-action btn-whatsapp" href="https://wa.me/5561992375871?text=Olá,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello%20sobre%20Direito%20Bancário." target="_blank" rel="noopener">
+            <img src="../../media/whatsapp.png" alt="WhatsApp"> ENTRE EM CONTATO AGORA
           </a>
           <a class="btn-action btn-instagram" href="https://www.instagram.com/eudanieletorres/" target="_blank" rel="noopener">
-            <img src="../media/instagram.png" alt="Instagram"> ACESSE MEU INSTAGRAM
+            <img src="../../media/instagram.png" alt="Instagram"> ACESSE MEU INSTAGRAM
           </a>
         </div>
       </div>
@@ -416,40 +428,49 @@
     <!-- ÁREAS DE ATUAÇÃO -->
     <section class="areas-section">
       <div class="container">
-        <h2 class="section-title">Áreas de Atuação</h2>
+        <h2 class="section-title" data-aos="fade-down">Áreas de Atuação</h2>
         <div class="areas-grid">
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Direito Civil</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Direito Imobiliário</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Regularização de Imóveis</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Usucapião</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Família e Sucessões</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Inventário e Herança</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Planejamento Patrimonial</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Responsabilidade Civil e Consumidor</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Direito Bancário</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Renegociação de dívidas</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Juros abusivos</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Cartão de crédito e dívidas</div>
-          <div class="area-item"><img src="../media/tribunal.png" alt=""> Negativação ilegal</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="0"><img src="../../media/tribunal.png" alt=""> Direito Bancário</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="50"><img src="../../media/tribunal.png" alt=""> Cartão de crédito e dívidas</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="100"><img src="../../media/tribunal.png" alt=""> Renegociação de dívidas</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="150"><img src="../../media/tribunal.png" alt=""> Juros abusivos</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="200"><img src="../../media/tribunal.png" alt=""> Negativação ilegal</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="250"><img src="../../media/tribunal.png" alt=""> Responsabilidade Civil e Consumidor</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="300"><img src="../../media/tribunal.png" alt=""> Direito Civil</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="350"><img src="../../media/tribunal.png" alt=""> Direito Empresarial</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="400"><img src="../../media/tribunal.png" alt=""> Direito Imobiliário</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="450"><img src="../../media/tribunal.png" alt=""> Regularização de Imóveis</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="500"><img src="../../media/tribunal.png" alt=""> Usucapião</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="550"><img src="../../media/tribunal.png" alt=""> Família e Sucessões</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="600"><img src="../../media/tribunal.png" alt=""> Inventário e Herança</div>
+          <div class="area-item" data-aos="zoom-in" data-aos-delay="650"><img src="../../media/tribunal.png" alt=""> Planejamento Patrimonial</div>
         </div>
       </div>
     </section>
 
     <!-- LOGO DA MARCA -->
-    <div class="logo-footer">
-      <img src="../media/logo2.png" alt="Logotipo Daniele Torres" loading="lazy">
+    <div class="logo-footer" data-aos="zoom-out">
+      <img src="../../media/logo2.png" alt="Logotipo Daniele Torres" loading="lazy">
     </div>
   </main>
 
   <!-- RODAPÉ -->
   <footer>
-    <p>© 2026 Daniele Torres Arguello • Todos os direitos reservados.</p>
+    <p>© 2026 Daniele Torres Arguello • OAB/DF 78.217 • Material informativo em conformidade com o Provimento nº 205/2021 do CFOAB.</p>
   </footer>
 
   <!-- BOTÃO FLUTUANTE WHATSAPP -->
   <a class="whatsapp-float" href="https://wa.me/5561992375871?text=Olá,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
-    <img src="../media/whatsapp.png" alt="WhatsApp">
+    <img src="../../media/whatsapp.png" alt="WhatsApp">
   </a>
 
+  <!-- SCRIPTS DE ANIMAÇÃO -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 </html>
