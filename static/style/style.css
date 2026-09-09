@@ -167,7 +167,6 @@ div .arrowDown {
 html:not([data-scroll='0']) #arrowSection {
     display: none;
 }
-
 .imgEntrada {
     max-height: 20rem;
     max-width: 90%;
@@ -196,7 +195,7 @@ a {
 section {    
     width: 100%;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
+    padding: 1rem 1.5rem;
 }
 
 .whatsapp-float {
@@ -507,9 +506,10 @@ footer div {
 
 .centralizaVertical {
     position: relative;
-    top: 0;
+    top: 100px;
     width: 100%;
 }
+.minHeight { min-height: 820px;}
 
 /* CARDS DAS ÁREAS DE ATUAÇÃO E FILOSOFIA */
 #areaAtuacao .flexRow.flex-nowrap,
