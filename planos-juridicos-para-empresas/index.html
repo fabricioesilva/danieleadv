@@ -11,19 +11,115 @@
 <meta name="creator" content="e-Silva">
 <meta name="theme-color" content="#ffffff">
 <meta name="msapplication-TileColor" content="#2a181d">
-<meta property="og:url" content="http://danieletorresarguello.com.br/empresarial/">
+
+<!-- Open Graph / WhatsApp -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="http://danieletorresarguello.com.br/empresarial/">
 <meta property="og:title" content="Plano Jurídico Empresarial em Brasília | Departamento Jurídico Mensal">
 <meta property="og:description" content="Departamento jurídico sem folha, ponto ou 13º. Planos mensais a partir de R$900 para sua empresa ter segurança jurídica contínua.">
 <meta property="og:image" content="http://danieletorresarguello.com.br/media/logo_cheio.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Daniele Torres Arguello Advocacia">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plano Jurídico Empresarial em Brasília | Advogada Daniele Torres">
+<meta name="twitter:description" content="Departamento jurídico preventivo para empresas a partir de R$900/mês. Contratos, Trabalhista e LGPD.">
 <meta name="twitter:image" content="http://danieletorresarguello.com.br/media/logo1.jpeg">
+
+<!-- Favicons e Manifest -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" href="/favicon.ico">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<!-- Preconnect para CDNs externas -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+
+<!-- Schema.org - Dados Estruturados para SEO Local e Serviços Legais -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Daniele Torres Arguello - Advocacia Empresarial",
+  "image": "http://danieletorresarguello.com.br/media/logo_cheio.jpg",
+  "@id": "http://danieletorresarguello.com.br/empresarial/#legalservice",
+  "url": "http://danieletorresarguello.com.br/empresarial/",
+  "telephone": "+5561992375871",
+  "email": "danieletorresarguelloadv@gmail.com",
+  "priceRange": "R$ 900 - R$ 2.400 / mês",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Brasília",
+    "addressRegion": "DF",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -15.7975,
+    "longitude": -47.8919
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:30",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://instagram.com/eudanieletorres"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Planos Jurídicos Empresariais Mensais",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Plano Essencial",
+          "description": "Até 3 demandas consultivas ou contratuais por mês. Ideal para 1 a 4 funcionários."
+        },
+        "price": "900.00",
+        "priceCurrency": "BRL"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Plano Empresarial",
+          "description": "Até 5 demandas por mês, análise trabalhista e LGPD essencial. Ideal para 5 a 30 funcionários."
+        },
+        "price": "1500.00",
+        "priceCurrency": "BRL"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Plano Corporativo",
+          "description": "Até 8 demandas por mês, SLA prioritário e suporte societário leve. Ideal para 31 a 60+ funcionários."
+        },
+        "price": "2400.00",
+        "priceCurrency": "BRL"
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Google Analytics 4 (GA4) -->
 <script>
   (function(){
     try {
@@ -46,9 +142,10 @@
     } catch(e){}
   })();
 </script>
+
 <style>
-/* Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
+  /* Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
 
   /* RESET E BASE */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -567,12 +664,23 @@
   .footer a { color: #e8c2cd; }
   .footer a:hover { color: var(--white); text-decoration: underline; }
 
+  /* ANIMAÇÃO DE SCROLL REVEAL (EFEITO SUAVE DE SURGIMENTO) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   /* UTIL */
   .mt-24 { margin-top: 24px; }
   .mt-32 { margin-top: 32px; }
   .center { text-align: center; }
 </style>
-  
   <!-- Preconnect para CDNs externas -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://unpkg.com">
@@ -585,7 +693,6 @@
     gtag('js', new Date());
     gtag('config', 'G-NRGP10D8G2');
   </script>
-  
 </head>
 <body>
 
@@ -612,7 +719,7 @@
 <main>
 <section class="hero" id="topo">
   <div class="container hero-grid">
-    <div class="hero-left">
+    <div class="hero-left reveal">
       <span class="eyebrow">Advocacia empresarial • Brasília DF • OAB/DF 47.657</span>
       <h1>Departamento jurídico sem folha de pagamento, <em>ponto eletrônico ou 13º.</em></h1>
       <p class="lead">Plano jurídico mensal para empresas que precisam de segurança preventiva, contratos blindados e resposta rápida — sem contratar CLT e sem sustos no final do mês.</p>
@@ -626,7 +733,7 @@
     </div>
 
     <!-- FORM CARD -->
-    <div class="hero-right" id="diagnostico">
+    <div class="hero-right reveal" id="diagnostico">
       <div class="card form-card">
         <div class="form-card-head">
           <h3>Diagnóstico Inicial</h3>
@@ -686,21 +793,21 @@
 <!-- 3 PILARES -->
 <section class="section" id="pilares">
   <div class="container">
-    <div class="section-kicker">POR QUE UM PLANO MENSAL</div>
-    <h2 class="section-title">Segurança jurídica não pode ser reativa. Precisa ser rotina.</h2>
-    <p class="section-desc">A maioria das empresas só procura advogado quando o problema já virou processo. O plano inverte essa lógica.</p>
+    <div class="section-kicker reveal">POR QUE UM PLANO MENSAL</div>
+    <h2 class="section-title reveal">Segurança jurídica não pode ser reativa. Precisa ser rotina.</h2>
+    <p class="section-desc reveal">A maioria das empresas só procura advogado quando o problema já virou processo. O plano inverte essa lógica.</p>
     <div class="grid-3">
-      <div class="pilar-card">
+      <div class="pilar-card reveal">
         <div class="pilar-num">01 / PREVENÇÃO</div>
         <h3>Antes do problema nascer</h3>
         <p>Revisão de contratos, políticas internas, comunicados e documentos antes de assinar. Evita multas, ações trabalhistas e desgastes com clientes e fornecedores.</p>
       </div>
-      <div class="pilar-card">
+      <div class="pilar-card reveal">
         <div class="pilar-num">02 / PREVISIBILIDADE</div>
         <h3>Valor fixo, sem sustos</h3>
         <p>Você sabe quanto vai investir todo mês. Sem cobrança por hora, sem surpresa por e-mail. Demandas contabilizadas de forma clara e transparente no contrato.</p>
       </div>
-      <div class="pilar-card">
+      <div class="pilar-card reveal">
         <div class="pilar-num">03 / CONTINUIDADE</div>
         <h3>Alguém que conhece sua empresa</h3>
         <p>Não é atendimento rotativo. Sou eu acompanhando sua operação, entendendo seu modelo e criando memória jurídica. Agilidade que só quem já conhece o negócio tem.</p>
@@ -712,37 +819,37 @@
 <!-- O QUE INCLUI -->
 <section class="section" id="inclui" style="background: var(--beige-dark);">
   <div class="container">
-    <div class="section-kicker">O QUE ESTÁ INCLUSO</div>
-    <h2 class="section-title">Seu departamento jurídico externo, no dia a dia.</h2>
+    <div class="section-kicker reveal">O QUE ESTÁ INCLUSO</div>
+    <h2 class="section-title reveal">Seu departamento jurídico externo, no dia a dia.</h2>
     <div class="includes-grid">
-      <div class="include-card">
+      <div class="include-card reveal">
         <div class="include-icon">C</div>
         <div><h4>Contratos</h4><p>Elaboração, revisão e negociação de contratos de prestação de serviços, parceria, fornecimento, NDAs e distratos.</p></div>
       </div>
-      <div class="include-card">
+      <div class="include-card reveal">
         <div class="include-icon">T</div>
         <div><h4>Trabalhista preventivo</h4><p>Análise de admissão, advertências, políticas internas, banco de horas, comunicados e redução de risco de reclamatórias.</p></div>
       </div>
-      <div class="include-card">
+      <div class="include-card reveal">
         <div class="include-icon">L</div>
         <div><h4>LGPD essencial</h4><p>Políticas de privacidade, termos de uso, mapeamento inicial, respostas a titulares e adequação de documentos.</p></div>
       </div>
-      <div class="include-card">
+      <div class="include-card reveal">
         <div class="include-icon">C</div>
         <div><h4>Consultoria ilimitada</h4><p>Tire dúvidas por WhatsApp e e-mail com retorno em até 1 dia útil. Orientação prática para tomada de decisão.</p></div>
       </div>
-      <div class="include-card">
+      <div class="include-card reveal">
         <div class="include-icon">C</div>
         <div><h4>Cobrança e notificações</h4><p>Notificações extrajudiciais, acordos amigáveis e estratégias de cobrança sem precisar judicializar de imediato.</p></div>
       </div>
-      <div class="include-card">
+      <div class="include-card reveal">
         <div class="include-icon">S</div>
         <div><h4>Societário leve</h4><p>Alterações simples, atas, organização documental e suporte para crescimento com segurança.</p></div>
       </div>
     </div>
 
     <!-- O QUE NÃO INCLUI -->
-    <div class="transparency" id="nao-inclui">
+    <div class="transparency reveal" id="nao-inclui">
       <div>
         <div class="section-kicker" style="margin-bottom:8px;">TRANSPARÊNCIA TOTAL</div>
         <h3>O que NÃO está incluso para você não ter surpresa</h3>
@@ -762,13 +869,13 @@
 <!-- FAIXAS DE PREÇO -->
 <section class="section pricing" id="planos">
   <div class="container">
-    <div class="section-kicker">FAIXAS E INVESTIMENTO</div>
-    <h2 class="section-title">Escolha a previsibilidade que seu caixa precisa.</h2>
-    <p class="section-desc">Todos os planos incluem retorno em até 1 dia útil, canal direto com a advogada e gestão de demandas por mês. Sem fidelidade abusiva: 90 dias de ciclo mínimo para implementação.</p>
+    <div class="section-kicker reveal">FAIXAS E INVESTIMENTO</div>
+    <h2 class="section-title reveal">Escolha a previsibilidade que seu caixa precisa.</h2>
+    <p class="section-desc reveal">Todos os planos incluem retorno em até 1 dia útil, canal direto com a advogada e gestão de demandas por mês. Sem fidelidade abusiva: 90 dias de ciclo mínimo para implementação.</p>
 
     <div class="pricing-grid">
       <!-- Essencial -->
-      <div class="price-card">
+      <div class="price-card reveal">
         <h3>Essencial</h3>
         <div class="price">R$ 900 <small>/ mês</small></div>
         <div class="meta">até 3 demandas • ideal 1 a 4 funcionários</div>
@@ -782,7 +889,7 @@
       </div>
 
       <!-- Empresarial -->
-      <div class="price-card featured">
+      <div class="price-card featured reveal">
         <span class="badge">MAIS CONTRATADO</span>
         <h3>Empresarial</h3>
         <div class="price">R$ 1.500 <small>/ mês</small></div>
@@ -798,7 +905,7 @@
       </div>
 
       <!-- Corporativo -->
-      <div class="price-card">
+      <div class="price-card reveal">
         <h3>Corporativo</h3>
         <div class="price">R$ 2.400 <small>/ mês</small></div>
         <div class="meta">até 8 demandas • ideal 31 a 60+ funcionários</div>
@@ -813,7 +920,7 @@
       </div>
     </div>
 
-    <div class="pricing-legal">
+    <div class="pricing-legal reveal">
       <strong>Como funciona a contagem:</strong> 1 demanda = 1 contrato para revisar/elaborar, 1 parecer escrito, 1 política interna, 1 notificação ou 1 consulta complexa com análise documental. Consultas rápidas por WhatsApp não consomem franquia. Demandas excedentes orçadas à parte com desconto de 20% para assinantes. Pagamento mensal via PIX ou boleto. Ciclo mínimo de 90 dias para implementação e organização da base documental. Reajuste anual pelo IPCA.
     </div>
   </div>
@@ -822,20 +929,20 @@
 <!-- COMO ADERIR -->
 <section class="section" id="como-aderir">
   <div class="container">
-    <div class="section-kicker">COMO ADERIR</div>
-    <h2 class="section-title">3 passos para ter seu departamento jurídico.</h2>
+    <div class="section-kicker reveal">COMO ADERIR</div>
+    <h2 class="section-title reveal">3 passos para ter seu departamento jurídico.</h2>
     <div class="steps-grid">
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">1</div>
         <h4>Diagnóstico (hoje)</h4>
         <p>Você envia os dados no formulário. Eu analiso porte, dores e documentos atuais e recomendo a faixa ideal no seu WhatsApp.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">2</div>
         <h4>Proposta e contrato</h4>
         <p>Você recebe contrato simples, escopo claro e cronograma de organização. Assinatura digital em 5 minutos. Sem burocracia.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">3</div>
         <h4>Onboarding jurídico</h4>
         <p>Nos primeiros 15 dias organizamos pastas, modelos, contratos padrão e canal direto. Depois, rotina preventiva com retorno em até 1 dia útil.</p>
@@ -847,7 +954,7 @@
 <!-- CTA FINAL DARK -->
 <section class="cta-dark" id="contato">
   <div class="container cta-grid">
-    <div>
+    <div class="reveal">
       <h2>Fale direto com quem vai cuidar do seu jurídico.</h2>
       <p class="lead">Sem SDR, sem chatbot. É comigo mesma. Me conta hoje qual é o ponto que mais te tira o sono e eu já volto com o plano ideal e os próximos passos.</p>
       <div class="mt-24" style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -856,7 +963,7 @@
       </div>
     </div>
 
-    <div class="contact-grid">
+    <div class="contact-grid reveal">
       <div class="contact-item">
         <span class="label">E-mail</span>
         <a href="mailto:danieletorresarguelloadv@gmail.com">danieletorresarguelloadv@gmail.com</a>
@@ -884,7 +991,7 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-inner">
-    <p>© 2025 Daniele Torres Arguello • Advocacia Empresarial • Brasília DF • Todos os direitos reservados.</p>
+    <p>© 2026 Daniele Torres Arguello • Advocacia Empresarial • Brasília DF • Todos os direitos reservados.</p>
     <p><a href="#topo">Voltar ao topo ↑</a> • Desenvolvido por <a href="#" onclick="return false;">e-Silva</a></p>
   </div>
 </footer>
@@ -893,6 +1000,7 @@
 (function(){
   'use strict';
 
+  // Smooth Scroll para links internos
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
     anchor.addEventListener('click', function(e){
       var targetId = this.getAttribute('href');
@@ -909,6 +1017,32 @@
     });
   });
 
+  // Animação Scroll/Reveal com IntersectionObserver
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries, observerInstance) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observerInstance.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1
+    });
+
+    reveals.forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    // Fallback para navegadores mais antigos
+    reveals.forEach(function(el) {
+      el.classList.add('active');
+    });
+  }
+
+  // Validação e envio do Formulário de Diagnóstico
   var form = document.getElementById('leadForm');
   var errorBox = document.getElementById('formError');
   if(!form) return;
@@ -974,6 +1108,7 @@
     window.open(url, '_blank', 'noopener');
   });
 
+  // Mascara de entrada para o campo WhatsApp
   var waInput = document.getElementById('whatsapp');
   if(waInput){
     waInput.addEventListener('input', function(){

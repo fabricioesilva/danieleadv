@@ -17,14 +17,14 @@
 <meta property="og:url" content="https://www.seudominio.com.br/">
 <meta property="og:title" content="Divórcio com Imóvel Financiado ou Empresa | Daniele Torres">
 <meta property="og:description" content="Baixe o guia de primeiros passos para o divórcio. Entenda a partilha de bens, dívidas e guarda de filhos em Brasília-DF.">
-<meta property="og:image" content="https://www.seudominio.com.br/og-image.jpg"> <!-- Altere para a URL da sua imagem -->
+<meta property="og:image" content="https://www.seudominio.com.br/og-image.jpg">
 <meta property="og:locale" content="pt_BR">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Divórcio com Imóvel Financiado ou Empresa | Daniele Torres">
 <meta name="twitter:description" content="Guia prático e orientação sobre divórcio, partilha de bens e guarda em Brasília/DF.">
-<meta name="twitter:image" content="https://www.seudominio.com.br/og-image.jpg"> <!-- Altere para a URL da sua imagem -->
+<meta name="twitter:image" content="https://www.seudominio.com.br/og-image.jpg">
 
 <!-- Schema.org - Dados Estruturados para SEO Local -->
 <script type="application/ld+json">
@@ -80,7 +80,20 @@ body{
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;font-family:inherit}
 
-/* CONTAINER COM PADDING RESPONSIVO SEGURO */
+/* ANIMAÇÃO AO ROLAR A TELA (REVEAL) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CONTAINER */
 .container{
   width: 100%;
   max-width:var(--max);
@@ -89,7 +102,7 @@ button{cursor:pointer;font-family:inherit}
 }
 @media(min-width:768px){ .container{ padding:0 32px; } }
 
-/* TOPBAR / HEADER */
+/* TOPBAR */
 .topbar{
   position:sticky;
   top:0;
@@ -487,7 +500,7 @@ button{cursor:pointer;font-family:inherit}
 <main>
   <section class="hero">
     <div class="container hero-grid">
-      <div>
+      <div class="reveal">
         <div class="tag"><span class="dot"></span> Direito de Família • Brasília - DF</div>
         <h1 class="h1">Divórcio com <em>imóvel financiado</em> ou empresa em comum? <span class="line2">Entenda os primeiros passos.</span></h1>
         <p class="sub">Guia informativo baseado nos pontos práticos que costumam gerar dúvidas no início do divórcio: partilha de bens, dívidas, guarda e documentos. Material geral, cada família tem particularidades.</p>
@@ -506,7 +519,7 @@ button{cursor:pointer;font-family:inherit}
         </div>
       </div>
 
-      <div class="form-wrap" id="formAnchor">
+      <div class="form-wrap reveal" id="formAnchor">
         <div class="form-bg"></div>
         <div class="card" id="cardForm">
           <div class="card-head">
@@ -558,7 +571,7 @@ button{cursor:pointer;font-family:inherit}
   <section class="section section-beige">
     <div class="container">
       <div class="grid-2">
-        <div>
+        <div class="reveal">
           <div class="kicker">Etapa 01 • Clareza</div>
           <h2 class="h2">Por onde começar</h2>
           <p class="p-muted">Antes de qualquer petição ou escritura, vale verificar se há consenso sobre pontos centrais. Isso define o caminho.</p>
@@ -567,7 +580,7 @@ button{cursor:pointer;font-family:inherit}
             <p>A via extrajudicial (escritura pública em cartório) é uma <strong>faculdade</strong>, não imposição. Depende de requisitos legais e de consenso entre as partes. Quando não for possível, o caminho é judicial.</p>
           </div>
         </div>
-        <div>
+        <div class="reveal">
           <div class="quad">
             <div class="quad-item"><h3>Partilha</h3><p>Quais bens existem e como será a divisão conforme regime de bens.</p></div>
             <div class="quad-item"><h3>Dívidas</h3><p>Quais dívidas são comuns e como entram na partilha (época, finalidade).</p></div>
@@ -602,7 +615,7 @@ button{cursor:pointer;font-family:inherit}
 
   <section class="section">
     <div class="container">
-      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div class="reveal" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
         <div>
           <div class="kicker">Etapa 02 • Organização</div>
           <h2 class="h2">Documentos geralmente necessários</h2>
@@ -610,7 +623,7 @@ button{cursor:pointer;font-family:inherit}
         <p class="p-muted">Lista geral e informativa. A lista exata varia conforme cartório, vara e seu regime de bens.</p>
       </div>
       <div class="grid-2">
-        <div class="card-white">
+        <div class="card-white reveal">
           <div class="mini-kicker">Documentos pessoais e família</div>
           <ul class="list">
             <li><span class="sym">◇</span> Documento de identidade e CPF de ambos</li>
@@ -620,7 +633,7 @@ button{cursor:pointer;font-family:inherit}
             <li><span class="sym">◇</span> Certidão de nascimento dos filhos</li>
           </ul>
         </div>
-        <div class="card-white">
+        <div class="card-white reveal">
           <div class="mini-kicker">Patrimônio, dívidas e renda</div>
           <ul class="list">
             <li><span class="sym">◇</span> Documentos de imóveis, veículos, contas e investimentos</li>
@@ -631,7 +644,7 @@ button{cursor:pointer;font-family:inherit}
           </ul>
         </div>
       </div>
-      <div class="bar">
+      <div class="bar reveal">
         <div class="bar-left"><div class="bar-ic">✦</div><p><b>Dica prática:</b> Reunir em pasta única agiliza a primeira orientação.</p></div>
         <small>Checklist informativo, não substitui orientação.</small>
       </div>
@@ -640,10 +653,12 @@ button{cursor:pointer;font-family:inherit}
 
   <section class="section section-beige">
     <div class="container">
-      <div class="kicker">Etapa 03 • Pontos sensíveis</div>
-      <h2 class="h2" style="max-width:720px">Questões com filhos + Patrimônio com nuances</h2>
+      <div class="reveal">
+        <div class="kicker">Etapa 03 • Pontos sensíveis</div>
+        <h2 class="h2" style="max-width:720px">Questões com filhos + Patrimônio com nuances</h2>
+      </div>
       <div class="grid-2">
-        <div class="card-highlight">
+        <div class="card-highlight reveal">
           <div style="display:flex;align-items:center;gap:12px">
             <div class="icon-circle">G</div><h3>Guarda e convivência</h3>
           </div>
@@ -654,7 +669,7 @@ button{cursor:pointer;font-family:inherit}
           </ul>
           <div class="foot-note">Conteúdo informativo. A definição exige análise do contexto familiar e eventual manifestação do Ministério Público quando houver menor.</div>
         </div>
-        <div class="card-highlight" style="background:var(--creme2)">
+        <div class="card-highlight reveal" style="background:var(--creme2)">
           <div style="display:flex;align-items:center;gap:12px">
             <div class="icon-circle dark">P</div><h3>Patrimônio e dívidas</h3>
           </div>
@@ -672,9 +687,9 @@ button{cursor:pointer;font-family:inherit}
 
   <section class="cta-final">
     <div class="container cta-grid">
-      <div>
+      <div class="reveal">
         <div class="kicker">Próximos passos</div>
-        <h2 class="h2">Cada história é única.<br>E informação nunca é demais.</h2>
+        <h2 class="h2">Cada história é única.<br>Vamos conversar sobre a sua?</h2>
         <p class="sub">Se depois de ler o guia restaram dúvidas sobre sua situação específica, entre em contato para orientação individualizada. Atendimento informativo, sem promessa de resultado.</p>
         <div class="cta-actions">
           <a id="ctaFinal" href="https://wa.me/5561992375871" target="_blank" rel="noopener" class="btn-white">Falar no WhatsApp - Brasília DF</a>
@@ -686,7 +701,7 @@ button{cursor:pointer;font-family:inherit}
           <a href="https://instagram.com/eudanieletorres" target="_blank" rel="noopener"><span class="k">Instagram</span><span class="v">@eudanieletorres</span></a>
         </div>
       </div>
-      <div>
+      <div class="reveal">
         <div class="steps-card">
           <h3>O que acontece depois do envio?</h3>
           <ol class="steps">
@@ -738,6 +753,23 @@ document.getElementById('leadForm').addEventListener('submit', function(e){
   document.getElementById('ctaFinal').href = link + '&utm_source=cta_final';
 
   window.open(link, '_blank');
+});
+
+/* SCRIPT DE OBSERVAÇÃO PARA REVELAR OS BLOCOS DURANTE O SCROLL */
+document.addEventListener("DOMContentLoaded", function() {
+  const reveals = document.querySelectorAll(".reveal");
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  reveals.forEach(el => observer.observe(el));
 });
 </script>
 </body>
