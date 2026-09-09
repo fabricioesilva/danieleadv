@@ -1,6 +1,5 @@
 let storeScroll = window.scrollY;
 let htmlTag = document.getElementsByTagName('html');
-
 document.addEventListener('scroll', () => {
   storeScroll = window.scrollY;
   if(storeScroll > 1) {
@@ -9,3 +8,4 @@ document.addEventListener('scroll', () => {
     htmlTag[0].setAttribute('data-scroll', 0);
   }
 });
+
