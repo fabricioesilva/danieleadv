@@ -1,12 +1,7 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "danieleadv",
   "compatibility_date": "2026-09-10",
   "assets": {
-    "directory": "."
-  },
-  "site": {
-    "bucket": ".",
-    "exclude": [".git", "node_modules", ".gitignore", "server.py"]
+    "directory": "./public"
   }
 }
