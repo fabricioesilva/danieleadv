@@ -4,8 +4,8 @@
     --burgundy: #4a1628;
     --burgundy-dark: #35101d;
     --burgundy-light: #6e2a42;
-    --beige: #fbf8f6;
-    --beige-dark: #f2ebe7;
+    --beige: rgb(251, 248, 246);
+    --beige-dark: rgb(242, 235, 231);
     --dark: #1e1a18;
     --muted: #7a6a66;
     --line: #ece3df;
@@ -240,16 +240,9 @@ section {
     100% { transform: scale(1.6); opacity: 0; }
 }
 
-/* .planoInicial {
-    background: radial-gradient(ellipse 80% 60% at 20% 30%, rgba(74,22,40,0.06), transparent 60%),
-                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(74,22,40,0.05), transparent 60%),
-                var(--beige);
-    border-bottom: 1px solid var(--line);
-    width: 100%;
-} */
  .planoInicial {
   background: 
-    linear-gradient(rgba(251, 248, 246, 0.1), rgba(255, 255, 246, 0.9)),
+    linear-gradient(rgba(251, 248, 246, 0.1), rgba(251, 248, 246, 1)),
     url('/media/texture_marble1.jpg');
   background-size: cover;
   background-position: center;
@@ -725,41 +718,18 @@ body {
 }
 
 /* HEADER */
-/* .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(251,248,246,0.95);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
-} */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(251,248,246,0.95);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
+    /* background: rgba(251,248,246,0.95); */
+    /* -webkit-backdrop-filter: blur(14px); */
+    /* backdrop-filter: blur(14px); */
+    /* border-bottom: 1px solid var(--line); */
     margin: 0;
     width: 100%;
     overflow: hidden;
 }
-/* .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 72px;
-}
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: 'Instrument Serif', serif;
-    font-size: 22px;
-    text-decoration: none;
-    color: var(--dark);
-} */
 .header-inner {
     display: flex;
     align-items: center;
@@ -776,16 +746,7 @@ body {
     letter-spacing: -0.01em;
     min-width: 0;
   }
-/* .logo-mark {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-image: url("../media/LOGO_SMALL_CLIENTE.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
-/* .logo-mark {
+.logo-mark {
     width: 44px;
     height: 44px;
     flex-shrink: 0;
@@ -794,7 +755,7 @@ body {
     background-size: contain; 
     background-position: center;
     background-repeat: no-repeat;
-  } */
+}
 .btn-header {
     background: var(--burgundy);
     color: var(--white);
@@ -811,8 +772,11 @@ body {
 .hero {
     padding: 64px 0;
     text-align: center;
-    border-bottom: 1px solid var(--line);
-    background: linear-gradient(180deg, var(--beige) 0%, var(--beige-dark) 100%);
+    /* border-bottom: 1px solid var(--line); */
+    /* background: linear-gradient(180deg, var(--beige) 0%, var(--beige-dark) 100%); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .eyebrow {
     display: inline-flex;
@@ -882,6 +846,38 @@ body {
     margin-bottom: 8px;
     color: var(--dark);
 }
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 76px;
+    padding: 16px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+}
+.checklist-item .icon {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    border-radius: 50%;
+    background: rgba(74,22,40,0.08);
+    color: var(--burgundy);
+    font-weight: 700;
+}
+.checklist-item p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--dark);
+}
 .alert-box {
     background: rgba(74,22,40,0.04);
     border-left: 4px solid var(--burgundy);
@@ -943,6 +939,25 @@ body {
 .btn-whatsapp:hover { background: var(--burgundy-dark); }
 .btn-whatsapp-gold { background: #d4a373; color: var(--dark); font-weight: 700; }
 .btn-whatsapp-gold:hover { background: #c29263; }
+.guide-box {
+    margin-top: 48px;
+    padding: 32px;
+    text-align: center;
+    background: var(--beige-dark);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+}
+.guide-box h2 {
+    margin-bottom: 12px;
+    font-family: 'Instrument Serif', serif;
+    color: var(--burgundy);
+    font-size: 30px;
+}
+.guide-box p {
+    max-width: 720px;
+    margin: 0 auto 24px;
+    color: var(--muted);
+}
 .btn-instagram { background: var(--white); color: var(--dark); border: 1px solid var(--line); }
 .btn-instagram:hover { border-color: var(--dark); }
 .btn-action img { width: 20px; height: 20px; }
@@ -1038,9 +1053,15 @@ footer {
 /* RESPONSIVIDADE */
 @media (max-width: 868px) {
     .grid-two-col { grid-template-columns: 1fr; }
+    .checklist-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .profile-card { flex-direction: column; text-align: center; }
     .cta-container { flex-direction: column; }
     .btn-action { width: 100%; justify-content: center; }
+}
+@media (max-width: 520px) {
+    .checklist-grid { grid-template-columns: 1fr; }
+    .card-content { padding: 24px; }
+    .guide-box { padding: 24px; }
 }
 
 /* HEADER & LOGO UNIFICADA */
@@ -1052,16 +1073,6 @@ footer {
     color: var(--dark);
 }
 
-.logo-mark {
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    background-image: url("../../media/LOGO_SMALL_CLIENTE.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
-}
 
 .logo-text {
     display: flex;
