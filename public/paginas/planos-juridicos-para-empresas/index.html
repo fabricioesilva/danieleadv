@@ -228,10 +228,14 @@
     min-width: 0;
 }
 .logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.logo-text small { color: #8c6e75; font-family: 'Inter', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: .1em; line-height: 1.2; }
 .logo-mark {
     width: 84px;
     height: 84px;
@@ -255,6 +259,9 @@
     color: var(--muted);
   }
   .nav-links a:hover { color: var(--dark); }
+  .mobile-menu-toggle, .mobile-menu-close { display: none; }
+  .mobile-menu-brand { display: none; }
+  .mobile-menu-panel { display: none; }
   
   .btn-header {
     display: inline-flex;
@@ -274,21 +281,50 @@
   .btn-header:hover { background: var(--burgundy-dark); }
 
   @media (max-width: 868px) {
-    .nav-links { display: none; }
-    .header-inner { height: 60px; }
-    .logo-mark { width: 36px; height: 36px; }
-    .logo-text { font-size: 16px; }
-    .btn-header { 
-      height: 34px; 
-      padding: 0 12px; 
-      font-size: 12px; 
-    }
+    .site-header { overflow: visible; }
+    .header-inner { height: 68px; }
+    .header-inner > .logo { max-width: calc(100% - 56px); }
+    .header-inner > .logo .logo-mark { width: 36px; height: 36px; }
+    .header-inner > .logo .logo-text { font-size: 16px; }
+    .header-inner > .nav { display: block; }
+    .header-inner > .nav .nav-links, .header-inner > .nav > .btn-header { display: none; }
+    .mobile-menu-toggle { display: inline-flex; position: fixed; top: 12px; right: 20px; z-index: 201; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--white); color: var(--burgundy); font-size: 22px; cursor: pointer; }
+    .mobile-menu-panel { position: fixed; inset: 0; z-index: 200; display: none; justify-content: flex-start; background: rgba(30,26,24,.32); }
+    .mobile-menu-panel.is-open { display: flex; }
+    .mobile-menu-panel .nav { position: absolute; top: 0; left: 0; bottom: 0; display: flex; width: min(100%, 420px); padding: 1rem 1.25rem 2rem; flex-direction: column; align-items: stretch; gap: 2rem; background: var(--beige); box-shadow: 18px 0 45px rgba(53,16,29,.14); transform: translateX(-100%); transition: transform .3s ease; overflow-y: auto; }
+    .mobile-menu-panel.is-open .nav { transform: translateX(0) !important; }
+    .mobile-menu-brand { display: flex; align-items: center; justify-content: center; gap: 8px; padding: .35rem 0 1rem; border-bottom: 1px solid var(--line); }
+    .mobile-menu-brand .logo-mark { width: 44px; height: 44px; }
+    .mobile-menu-brand .logo-text { font-size: 18px; text-align: left; }
+    .mobile-menu-brand .logo-text small { font-size: 7px; }
+    .mobile-menu-close { display: inline-flex; position: absolute; top: 1rem; right: 1rem; align-items: center; justify-content: center; width: 40px; height: 40px; border: 0; background: transparent; color: var(--burgundy); font-size: 28px; cursor: pointer; }
+    .mobile-menu-panel .nav-links { display: flex; width: 100%; flex-direction: column; gap: .35rem; }
+    .mobile-menu-panel .nav-links a { position: relative; display: block; padding: 1rem .25rem; border-bottom: 1px solid var(--line); color: var(--dark); font-size: .92rem; letter-spacing: .04em; text-align: left; transition: color .25s ease, padding-left .25s ease; }
+    .mobile-menu-panel .nav-links a::after { content: ''; position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: var(--burgundy); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+    .mobile-menu-panel .nav-links a:hover { padding-left: .55rem; color: var(--burgundy); }
+    .mobile-menu-panel .nav-links a:hover::after { transform: scaleX(1); }
+    .mobile-menu-panel .btn-header { display: inline-flex; width: 100%; min-height: 46px; margin-top: .5rem; box-shadow: 0 10px 24px rgba(74,22,40,.16); }
+    body.menu-is-open { overflow: hidden; }
   }
 
   @media (max-width: 480px) {
-    .logo-text { font-size: 14px; max-width: 140px; }
-    .btn-header span { display: none; }
-    .btn-header::after { content: "Contato"; }
+    .header-inner > .logo .logo-text { font-size: 14px; max-width: 180px; }
+    .header-inner > .logo .logo-text small { font-size: 7px; }
+    .mobile-menu-panel .nav { width: 100%; }
+  }
+
+  @media (max-width: 868px) {
+    .plans-page .site-header .header-inner { height: 68px; padding: 0 20px; }
+    .plans-page .site-header .logo-mark { width: 38px; height: 38px; }
+    .plans-page .site-header .logo-text { max-width: 210px; font-size: 16px; }
+    .plans-page .site-header .logo-text small { font-size: 7px; }
+    .plans-page .site-header .nav { display: block; width: auto; }
+    .plans-page .site-header .nav-links,
+    .plans-page .site-header .btn-header { display: none !important; }
+    .plans-page .mobile-menu-toggle { display: inline-flex; }
+    .plans-page .mobile-menu-panel:not(.is-open) { display: none !important; }
+    .plans-page .mobile-menu-panel.is-open { display: flex !important; }
+    .plans-page.menu-is-open .mobile-menu-toggle { display: none !important; }
   }
 
   /* BUTTONS GERAIS */
@@ -778,14 +814,15 @@
     gtag('config', 'G-NRGP10D8G2');
   </script>
 </head>
-<body>
+<body class="plans-page">
 
 <!-- HEADER -->
+<button class="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="/" aria-label="Daniele Torres Arguello - início">
       <span class="logo-mark"></span>
-      <span class="brand-name">Daniele Torres Arguello</span>
+      <span class="brand-name logo-text">Daniele Torres Arguello<small>ADVOGADA OAB/DF 78.217</small></span>
     </a>
     <nav class="nav" aria-label="Navegação principal">
       <div class="nav-links">
@@ -800,6 +837,23 @@
     </nav>
   </div>
 </header>
+
+<div class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
+  <nav class="nav" aria-label="Menu mobile">
+    <a class="mobile-menu-brand" href="#topo" aria-label="Início - Daniele Torres Arguello">
+      <span class="logo-mark"></span>
+      <span class="logo-text">Daniele Torres Arguello<small>ADVOGADA OAB/DF 78.217</small></span>
+    </a>
+    <button class="mobile-menu-close" type="button" aria-label="Fechar menu">×</button>
+    <div class="nav-links">
+      <a href="#pilares">Pilares</a>
+      <a href="#sobre">Sobre a Advogada</a>
+      <a href="#inclui">O que inclui</a>
+      <a href="#planos">Investimento</a>
+    </div>
+    <a class="btn-header" href="#diagnostico"><span>Falar com a advogada</span></a>
+  </nav>
+</div>
 
 
 <main>
@@ -1243,6 +1297,31 @@
     });
   }
 })();
+</script>
+<script>
+  (function () {
+    var panel = document.getElementById('mobileMenuPanel');
+    var openButton = document.querySelector('.mobile-menu-toggle');
+    var closeButton = document.querySelector('.mobile-menu-close');
+    if (!panel || !openButton || !closeButton) return;
+
+    function setMenu(isOpen) {
+      panel.classList.toggle('is-open', isOpen);
+      panel.setAttribute('aria-hidden', String(!isOpen));
+      openButton.setAttribute('aria-expanded', String(isOpen));
+      openButton.style.display = isOpen ? 'none' : '';
+      document.body.classList.toggle('menu-is-open', isOpen);
+    }
+
+    openButton.addEventListener('click', function () { setMenu(true); });
+    closeButton.addEventListener('click', function () { setMenu(false); });
+    panel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setMenu(false); });
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 868) setMenu(false);
+    });
+  })();
 </script>
 </body>
 </html>

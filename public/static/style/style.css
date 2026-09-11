@@ -784,7 +784,7 @@ footer div {
     .english-page #sectionNavMenu nav ul li { float: none; margin: 0; }
     .english-page #sectionNavMenu nav ul li a { display: block; padding: 1rem .25rem; color: var(--dark); font-size: 1.2rem; letter-spacing: .06em; text-align: left; border-bottom: 1px solid var(--line); }
     .english-page #sectionNavMenu .language-switcher { justify-content: flex-start; gap: .75rem; margin: 1rem 0 0; border-bottom: 0; }
-    .english-page #sectionNavMenu .language-switcher a { display: inline-block; padding: .5rem 0; border-bottom: 0; }
+    .english-page #sectionNavMenu .language-switcher a { display: inline-block; padding: .5rem 0; border-bottom: 0;}
     .english-page #menuFechar { position: static; display: flex; width: 44px; height: 44px; flex: 0 0 44px; }
     .english-page #menuHamburger { display: flex; z-index: 1001; }
     .english-page.menu-is-open #menuHamburger { opacity: 0; pointer-events: none; }
@@ -1472,4 +1472,49 @@ footer {
     .english-page #sectionNavMenu:not(.is-open) { visibility: hidden; opacity: 0; pointer-events: none; }
     .english-page #sectionNavMenu.is-open { visibility: visible; opacity: 1; pointer-events: auto; }
     .english-page.menu-is-open #menuHamburger { display: none !important; }
+}
+
+/* MAIN PORTUGUESE PAGE MOBILE NAVIGATION */
+.portuguese-page .pt-mobile-menu-head { display: contents; }
+.portuguese-page .pt-nav-brand { display: inline-flex; align-items: center; gap: .65rem; color: var(--dark); text-decoration: none; }
+.portuguese-page .pt-nav-brand img { display: block; height: 4.5rem; width: auto; }
+.portuguese-page .pt-nav-brand span { display: flex; flex-direction: column; gap: .12rem; text-align: left; white-space: nowrap; }
+.portuguese-page .pt-nav-brand strong { color: var(--dark); font-family: 'Instrument Serif', Georgia, serif; font-size: 1.25rem; font-weight: 400; line-height: 1.05; }
+.portuguese-page .pt-nav-brand small { color: #8c6e75; font-size: .48rem; font-weight: 700; letter-spacing: .11em; line-height: 1.2; }
+.portuguese-page .language-switcher { display: flex; align-items: center; gap: .45rem; margin-left: .75rem; color: var(--muted); font-size: .78rem; }
+.portuguese-page .language-switcher a { padding: 4px; color: inherit; text-decoration: none; }
+.portuguese-page .language-switcher a:last-child { color: var(--burgundy); font-weight: 700; }
+
+@media (min-width: 1131px) {
+    .portuguese-page #sectionNavMenu nav { flex-direction: row; justify-content: space-between; max-width: 1240px; padding: 1rem 1.5rem; gap: 1rem; }
+    .portuguese-page #sectionNavMenu nav ul { display: flex; align-items: center; gap: .25rem; }
+    .portuguese-page #sectionNavMenu nav ul li { margin: 0; }
+    .portuguese-page #sectionNavMenu nav ul li a { font-size: .78rem; letter-spacing: .08em; padding: 8px 12px; }
+    .portuguese-page #menuFechar { display: none; }
+}
+
+@media (max-width: 1130px) {
+    .portuguese-page #sectionNavMenu { display: none; position: fixed; inset: 0; z-index: 1000; margin: 0; background: rgba(30, 26, 24, .32); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .25s ease, visibility .25s ease; }
+    .portuguese-page.menu-is-open #sectionNavMenu { display: block; opacity: 1; visibility: visible; pointer-events: auto; }
+    .portuguese-page #sectionNavMenu nav { position: absolute; top: 0; right: 0; bottom: 0; width: min(100%, 420px); height: 100%; padding: 1.25rem 1.5rem 2rem; display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 2.5rem; overflow-y: auto; background: var(--beige); box-shadow: -18px 0 45px rgba(53, 16, 29, .14); transform: translateX(100%); transition: transform .3s ease; }
+    .portuguese-page.menu-is-open #sectionNavMenu nav { transform: translateX(0); }
+    .portuguese-page .pt-mobile-menu-head { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
+    .portuguese-page .pt-nav-brand img { height: 4rem; }
+    .portuguese-page .pt-nav-brand strong { font-size: 1.15rem; }
+    .portuguese-page .pt-nav-brand small { font-size: .44rem; }
+    .portuguese-page #menuFechar { position: static; display: flex; width: 44px; height: 44px; flex: 0 0 44px; }
+    .portuguese-page #sectionNavMenu nav ul { display: flex; flex-direction: column; align-items: stretch; gap: .35rem; width: 100%; padding: 0; }
+    .portuguese-page #sectionNavMenu nav ul li { float: none; margin: 0; }
+    .portuguese-page #sectionNavMenu nav ul li a { display: block; padding: 1rem .25rem; color: var(--dark); font-size: 1.2rem; letter-spacing: .06em; text-align: left; border-bottom: 1px solid var(--line); }
+    .portuguese-page #sectionNavMenu .language-switcher { justify-content: flex-start; gap: .75rem; margin: 1rem 0 0; border-bottom: 0; }
+    .portuguese-page #sectionNavMenu .language-switcher a { display: inline-block; padding: .5rem 0; border-bottom: 0; font-weight: 700 !important; }
+    .portuguese-page.menu-is-open #menuHamburger { display: none !important; }
+}
+
+@media (max-width: 680px) {
+    .portuguese-page #sectionNavMenu nav { padding: .8rem 1rem 1.5rem; }
+    .portuguese-page #sectionNavMenu nav ul li a { font-size: 1.08rem; letter-spacing: .04em; }
+    .portuguese-page .pt-nav-brand img { height: 3.7rem; }
+    .portuguese-page .pt-nav-brand strong { font-size: 1.05rem; }
+    .portuguese-page .pt-nav-brand small { font-size: .4rem; letter-spacing: .08em; }
 }

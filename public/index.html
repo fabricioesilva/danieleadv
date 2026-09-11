@@ -51,30 +51,32 @@
     gtag('config', 'G-NRGP10D8G2');
   </script>
 </head>
-<body>
+<body class="portuguese-page">
 
   <!-- Botões Flutuantes do Menu Hamburguer -->
   <button id="menuHamburger" type="button" aria-label="Abrir Menu">
     <a href="javascript:abrirMenu()"><i class="fa-solid fa-bars fa-lg"></i></a>
   </button>
   
-  <button id="menuFechar" type="button" aria-label="Fechar Menu">
-    <a href="javascript:fecharMenu()"><i class="fa-solid fa-xmark fa-2xl"></i></a>
-  </button>
 
   <!-- Hero / Banner Principal -->
   <section class="bkgTxt margin-top-maior minHeight planoInicial" style="margin: 0 auto;">
     <div id="sectionNavMenu">
       <nav>
-        <span id="navMenuSmLogo">
-          <img src="/media/LOGO_SMALL_CLIENTE.png" style="height: 6rem; width: auto;" alt="Logotipo Daniele Torres">
-        </span>
+        <div class="pt-mobile-menu-head">
+          <a class="pt-nav-brand" href="#top" aria-label="Início - Daniele Torres Arguello">
+            <img src="/media/LOGO_SMALL_CLIENTE.png" alt="Logotipo Daniele Torres">
+            <span><strong>Daniele Torres Arguello</strong><small>ADVOGADA OAB/DF 78.217</small></span>
+          </a>
+          <button id="menuFechar" type="button" aria-label="Fechar Menu" onclick="fecharMenu()"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+        </div>
         <ul id="listaMenu">
           <li><a class="hover-underline-animation" href="#quemSouEu">QUEM SOU EU</a></li>
           <li><a class="hover-underline-animation" href="#filosofia">FILOSOFIA</a></li>
           <li><a class="hover-underline-animation" href="#areaAtuacao">ÁREAS DE ATUAÇÃO</a></li>
           <li><a class="hover-underline-animation" href="#planosJuridicos">PLANOS JURÍDICOS</a></li>
           <li><a class="hover-underline-animation" href="#contato">CONTATO</a></li>
+          <li class="language-switcher">PT<span aria-hidden="true">|</span><a class="hover-underline-animation" href="/en/">EN</a></li>
         </ul>
       </nav>
     </div>
@@ -342,6 +344,7 @@
 
     const abrirMenu = () => {
       fecharAbrirCoteudo('fechar');
+      document.body.classList.add('menu-is-open');
       menuHamburger.style.display = 'none';
       menuFechar.style.display = 'flex';
       document.getElementById('sectionNavMenu').style.display = 'block';
@@ -351,6 +354,7 @@
 
     const fecharMenu = () => {
       fecharAbrirCoteudo();
+      document.body.classList.remove('menu-is-open');
       menuHamburger.style.display = 'flex';
       menuFechar.style.display = 'none';
       document.getElementById('sectionNavMenu').style.display = 'none';   
@@ -370,10 +374,12 @@
 
     const ajustarMenu = () => {
       if(window.innerWidth > 1130 ) {
+        document.body.classList.remove('menu-is-open');
         document.getElementById('sectionNavMenu').style.display = 'block';
         menuFechar.style.display = 'none';
         menuHamburger.style.display = 'none';
       } else {        
+        document.body.classList.remove('menu-is-open');
         menuHamburger.style.display = 'flex';
         menuFechar.style.display = 'none';
         document.getElementById('sectionNavMenu').style.display = 'none';
