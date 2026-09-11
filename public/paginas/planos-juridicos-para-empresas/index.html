@@ -836,8 +836,8 @@
               <input class="input" id="empresa" name="empresa" type="text" placeholder="Ex: Souza Tech LTDA" autocomplete="organization" required>
             </div>
             <div class="field">
-              <label for="whatsapp">WhatsApp</label>
-              <input class="input" id="whatsapp" name="whatsapp" type="tel" placeholder="(61) 9 9999-9999" autocomplete="tel" required>
+              <!-- <label for="whatsapp">WhatsApp</label> -->
+              <input class="input" id="whatsapp" name="whatsapp" type="hidden" value="(61) 9 9999-9999" autocomplete="tel" required>
             </div>
             <div class="field">
               <label for="funcionarios">Nº de funcionários</label>
@@ -1081,7 +1081,7 @@
       <p class="lead">Sem SDR, sem chatbot. É comigo mesma. Me conta hoje qual é o ponto que mais te tira o sono e eu já volto com o plano ideal e os próximos passos.</p>
       <div class="mt-24" style="display:flex; gap:10px; flex-wrap:wrap;">
         <a class="btn" style="background:var(--white); color:var(--burgundy);" href="#diagnostico">Preencher diagnóstico</a>
-        <a class="btn" style="background:transparent; border:1px solid rgba(255,255,255,0.22); color:var(--white);" href="https://wa.me/5561992375871" target="_blank" rel="noopener">Ir para WhatsApp</a>
+        <a class="btn" style="background:transparent; border:1px solid rgba(255,255,255,0.22); color:var(--white);" href="https://wa.me/5561992375871?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20jurídico%20empresarial." target="_blank" rel="noopener">Ir para WhatsApp</a>
       </div>
     </div>
 
@@ -1199,24 +1199,19 @@
 
     if(!nome || nome.length < 2){ showError('Informe seu nome completo.'); return; }
     if(!empresa || empresa.length < 2){ showError('Informe o nome da sua empresa.'); return; }
-    if(!isValidWhatsApp(whatsapp)){ showError('WhatsApp inválido. Use DDD + número. Ex: (61) 99237-5871'); return; }
+    // if(!isValidWhatsApp(whatsapp)){ showError('WhatsApp inválido. Use DDD + número. Ex: (61) 99237-5871'); return; }
     if(!funcionarios){ showError('Selecione o número de funcionários.'); return; }
     if(!dor){ showError('Selecione sua principal dor hoje.'); return; }
     if(!lgpd){ showError('Você precisa concordar com o uso dos dados para contato (LGPD).'); return; }
 
     var lines = [];
-    lines.push('*DIAGNÓSTICO - PLANO JURÍDICO EMPRESARIAL*');
-    lines.push('');
+    lines.push('Olá, Daniele! Vim pela página do Plano Jurídico Empresarial e gostaria do diagnóstico inicial.');
+    lines.push('*DIAGNÓSTICO - PLANO JURÍDICO EMPRESARIAL*');    
     lines.push('*Nome:* ' + nome);
     lines.push('*Empresa:* ' + empresa);
-    lines.push('*WhatsApp:* ' + whatsapp);
     lines.push('*Funcionários:* ' + funcionarios);
-    lines.push('*Dor principal:* ' + dor);
-    lines.push('');
-    lines.push('Olá, Daniele! Vim pela landing do Plano Jurídico Empresarial e gostaria do diagnóstico inicial.');
-    var msg = lines.join('\n');
-    var encoded = encodeURIComponent(msg);
-
+    lines.push('*Situação:* ' + dor);    
+    var encoded = lines.map(encodeURIComponent).join('%0A');
     try {
       if(typeof window.fbq === 'function'){
         window.fbq('track', 'Lead', { content_name: 'Plano Jurídico Empresarial', value: funcionarios });

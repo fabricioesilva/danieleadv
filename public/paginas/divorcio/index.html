@@ -562,7 +562,7 @@ button{cursor:pointer;font-family:inherit}
     </div>
     <div class="topbar-right">
       <a class="insta-link" href="https://instagram.com/eudanieletorres" target="_blank" rel="noopener">@eudanieletorres</a>
-      <a href="https://wa.me/5561992375871" target="_blank" rel="noopener"><button class="btn-top">WhatsApp</button></a>
+      <a id="ctaHeader" href="https://wa.me/5561992375871?text=Ol%C3%A1%2C%20Dra.%20Daniele%21%20Gostaria%20de%20receber%20o%20guia%20sobre%20div%C3%B3rcio." target="_blank" rel="noopener"><button class="btn-top">WhatsApp</button></a>
     </div>
   </div>
 </header>
@@ -612,23 +612,24 @@ button{cursor:pointer;font-family:inherit}
               <input class="input" type="text" id="nome" name="nome" placeholder="Ex: Ana Paula" required>
             </div>
             <div>
-              <label class="label" for="whatsapp">WhatsApp</label>
-              <input class="input" type="tel" id="whatsapp" name="whatsapp" placeholder="(61) 9____-____" required>
+              <!-- <label class="label" for="whatsapp">WhatsApp</label> -->
+              <input class="input" type="hidden" id="whatsapp" name="whatsapp" value=". ">
             </div>
             <div>
               <label class="label" for="bens">Tem bens em comum?</label>
               <select class="select" id="bens" name="bens" required>
                 <option value="">Selecione seu caso</option>
-                <option>Imóvel financiado</option>
-                <option>Empresa</option>
-                <option>Imóvel + Empresa</option>
-                <option>Não temos bens relevantes</option>
+                <option>Divórcio com Imóvel financiado</option>
+                <option>Divórcio com Empresa</option>
+                <option>Divórcio com Imóvel + Empresa</option>
+                <option>Divórcio simples consensual</option>
+                <option>Divórcio simples judicial</option>
               </select>
               <div class="helper">* Este filtro nos ajuda a enviar conteúdo adequado ao seu patrimônio.</div>
             </div>
             <label class="check-row">
               <input type="checkbox" id="lgpd" name="lgpd" required>
-              <span>Autorizo o uso dos meus dados para envio do guia e contato informativo, nos termos da LGPD. Sem spam.</span>
+              <span>Autorizo o uso dos meus dados para envio do guia e contato informativo, nos termos da LGPD.</span>
             </label>
             <button type="submit" class="btn-submit">Receber guia no WhatsApp</button>
             <div class="disclaimer">Ao enviar, você será redirecionado para WhatsApp com mensagem pré-preenchida. Atendimento em Brasília-DF. Conteúdo informativo.</div>
@@ -789,7 +790,7 @@ button{cursor:pointer;font-family:inherit}
         <h2 class="h2">Cada história é única.<br>Vamos conversar sobre a sua?</h2>
         <p class="sub">Se depois de ler o guia restaram dúvidas sobre sua situação específica, entre em contato para orientação individualizada. Atendimento informativo, sem promessa de resultado.</p>
         <div class="cta-actions">
-          <a id="ctaFinal" href="https://wa.me/5561992375871" target="_blank" rel="noopener" class="btn-white">Falar no WhatsApp - Brasília DF</a>
+          <a id="ctaFinal" href="https://wa.me/5561992375871?text=Olá,%20Dra.%20Daniele!%20Gostaria%20de%20receber%20o%20guia%20sobre%20divórcio." target="_blank" rel="noopener" class="btn-white">Falar no WhatsApp - Brasília DF</a>
           <div class="small-note"><span>• Resposta em horário comercial</span></div>
         </div>
         <div class="contacts">
@@ -820,7 +821,7 @@ button{cursor:pointer;font-family:inherit}
 </main>
 
 <script>
-const WHATS_NUMBER = "5561992375871";
+const WHATS_NUMBER = "5561999554485";
 document.getElementById('year').textContent = new Date().getFullYear();
 
 document.getElementById('scrollToForm').addEventListener('click', ()=>{
@@ -828,7 +829,7 @@ document.getElementById('scrollToForm').addEventListener('click', ()=>{
 });
 
 function buildWaLink(nome, whatsapp, bens){
-  const msg = `Olá, vim do site LP-DIV-PATRIM e quero o guia Primeiros Passos para o Divórcio.%0A%0ANome: ${encodeURIComponent(nome)}%0AWhatsApp: ${encodeURIComponent(whatsapp)}%0APatrimônio: ${encodeURIComponent(bens)}`;
+  const msg = `Olá, Dra. Daniele, meu nome é%0A%0A ${encodeURIComponent(nome)}, gostaria de receber o guia com informações sobre%0A ${encodeURIComponent(bens)}.`;
   return `https://wa.me/${WHATS_NUMBER}?text=${msg}`;
 }
 
