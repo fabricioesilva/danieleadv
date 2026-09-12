@@ -49,7 +49,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="../../static/style/style.css">
 
-  <style>
+  <style media="not all">
     /* RESET E PALETA DE CORES DA NOVA IDENTIDADE */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -297,26 +297,7 @@
       border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 54px;
-      height: 54px;
-      background: #25d366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-      z-index: 99;
-      transition: transform 0.2s;
-    }
-    .whatsapp-float:hover { transform: scale(1.08); }
-    .whatsapp-float img { width: 28px; height: 28px; }
-
-    /* RESPONSIVIDADE */
+      /* RESPONSIVIDADE */
     @media (max-width: 868px) {
       .article-grid { grid-template-columns: 1fr; }
       .profile-card { flex-direction: column; text-align: center; }
@@ -325,7 +306,7 @@
     }
   </style>
 </head>
-<body>
+<body class="bancario-page">
 
 <div class="planoInicial">
   <!-- HEADER STICKY -->
@@ -411,7 +392,7 @@
 
         <!-- CTAS DE CONTATO -->
         <div class="cta-container" data-aos="fade-up">
-          <a class="btn-action btn-whatsapp" href="https://wa.me/5561992375871?text=Olá,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello%20sobre%20Direito%20Bancário." target="_blank" rel="noopener">
+          <a class="btn-action btn-whatsapp" href="https://wa.me/5561992375871?text=Olá,%20Dra.%20Daniele!%20Gostaria%20de%20tirar%20dúvidas%20sobre%20Direito%20Bancário%20e%20Cartão%20de%20Crédito." target="_blank" rel="noopener">
             <img src="../../media/whatsapp.png" alt="WhatsApp"> ENTRE EM CONTATO AGORA
           </a>
           <a class="btn-action btn-instagram" href="https://www.instagram.com/eudanieletorres/" target="_blank" rel="noopener">
@@ -456,7 +437,7 @@
   </footer>
 
   <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a class="whatsapp-float" href="https://wa.me/5561992375871?text=Olá,%20gostaria%20de%20conversar%20com%20a%20advogada%20Daniele%20Torres%20Arguello." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/5561992375871?text=Olá,%20Dra.%20Daniele!%20Gostaria%20de%20tirar%20dúvidas%20sobre%20Direito%20Bancário%20e%20Cartão%20de%20Crédito." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
     <img src="../../media/whatsapp.png" alt="WhatsApp">
   </a>
 
