@@ -242,7 +242,7 @@ section {
 
  .planoInicial {
   background: 
-    linear-gradient(rgba(251, 248, 246, 0.1), rgba(251, 248, 246, 1)),
+    linear-gradient(rgba(242, 235, 231, 0.3) 0%, rgba(242, 235, 231, 0.5) 72%, rgba(242, 235, 231, 1) 100%),
     url('/media/texture_marble1.jpg');
   background-size: cover;
   background-position: center;
@@ -964,9 +964,16 @@ body {
     color: var(--muted);
     font-size: 16px;
 }
+.video-guide-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    align-items: center;
+    gap: 64px;
+}
 .video-guide-player {
     overflow: hidden;
-    max-width: 576px;
+    width: 100%;
+    max-width: 360px;
     margin: 0 auto;
     border: 1px solid rgba(74,22,40,.14);
     border-radius: 16px;
@@ -986,14 +993,33 @@ body {
     object-fit: contain;
     background: var(--dark);
 }
+.video-guide-copy {
+    max-width: 480px;
+    color: var(--dark);
+}
+.video-guide-label {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--burgundy);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+.video-guide-copy > p {
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.7;
+}
 .video-guide-note {
     max-width: 760px;
-    margin: 24px auto 0;
-    color: var(--dark);
+    margin: 26px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(74,22,40,.16);
+    color: var(--burgundy);
     font-family: 'Instrument Serif', serif;
     font-size: 19px;
     line-height: 1.45;
-    text-align: center;
 }
 
 /* ARTIGO & CONTEÚDO */
@@ -1286,6 +1312,7 @@ footer {
     .bancario-page .btn-action { width: 100%; justify-content: center; }
 
     .grid-two-col { grid-template-columns: 1fr; }
+    .video-guide-grid { grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); gap: 32px; }
     .english-page #sectionNavMenu nav { padding: .8rem 1rem 1.5rem; }
     .english-page #sectionNavMenu nav ul li a { font-size: 1.08rem; letter-spacing: .04em; }
     .en-mobile-menu-head .en-nav-logo img { height: 3.7rem; }
@@ -1304,6 +1331,9 @@ footer {
         margin: 0 auto;
         width: 100%;
     }
+
+    .video-guide-grid { grid-template-columns: 1fr; gap: 28px; }
+    .video-guide-copy { max-width: none; }
 
 }
 

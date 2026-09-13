@@ -33,7 +33,8 @@
 
 	<!-- Google Fonts & CSS -->
 	<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../../static/style/style.css?v=holding-landscape-4">
+	<link rel="stylesheet" href="../../static/style/style.css?v=holding-video-1">
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 
 	<!-- Google Analytics 4 (GA4) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NRGP10D8G2"></script>
@@ -85,7 +86,32 @@
 				</div>
 			</div>
 		</section>
-
+		<section class="video-guide-section holding-video-guide" aria-labelledby="video-guide-title">
+			<div class="holding-container video-guide-container">
+				<div class="video-guide-heading">
+					<span class="holding-kicker">ORIENTAÇÃO INICIAL</span>
+					<h2 id="video-guide-title">Antes de continuar, entenda os pontos principais.</h2>
+					<p>Assista ao vídeo para entender como a holding familiar pode organizar a administração dos bens e por que o planejamento precisa ser analisado com cuidado.</p>
+				</div>
+				<div class="video-guide-grid">
+					<div class="video-guide-player">
+						<video id="holding-video" playsinline controls preload="metadata" aria-label="Vídeo sobre Holding Familiar e planejamento patrimonial">
+							<source src="media/vid-holding.webm" type="video/webm">
+							<source src="media/vid-holding.mp4" type="video/mp4">
+							Seu navegador não suporta a reprodução de vídeo.
+						</video>
+					</div>
+					<div class="video-guide-copy">
+						<span class="video-guide-label">O que você verá</span>
+						<p>No vídeo, a Dra. Daniele explica que a holding familiar é uma estrutura societária utilizada por famílias para organizar e gerir a administração de seus bens, principalmente imóveis.</p>
+						<p>Em vez de os bens ficarem registrados diretamente em nome de uma pessoa física, eles podem ser reunidos em uma empresa, com regras definidas sobre a participação e a gestão de cada membro da família.</p>
+						<p>Ainda, ela ressalta que o planejamento patrimonial não é simples e depende da realidade de cada família. Por isso, preparou um guia explicativo para ajudar nas primeiras decisões.</p>
+						<p class="video-guide-note">Para compreender melhor a Holding Familiar e o planejamento patrimonial, acesse o material preparado pela Dra. Daniele Torres Arguello – OAB/DF 78.217.</p>
+						<a class="holding-button holding-button-primary" href="https://wa.me/5561992375871?text=Ol%C3%A1%2C%20Dra.%20Daniele.%20Gostaria%20de%20receber%20o%20guia%20sobre%20Holding%20Familiar%20e%20planejamento%20patrimonial." target="_blank" rel="noopener">Saiba mais <span aria-hidden="true">&#8594;</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="holding-intro" id="entenda">
 			<div class="holding-container holding-intro-grid">
 				<div>
@@ -197,5 +223,22 @@
 	</a>
 
 	<script src="../../static/js/custom.js" defer></script>
+	<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+	<script>
+		new Plyr('#holding-video', {
+			controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+			i18n: {
+				play: 'Reproduzir',
+				pause: 'Pausar',
+				seek: 'Buscar',
+				volume: 'Volume',
+				mute: 'Silenciar',
+				unmute: 'Ativar som',
+				enterFullscreen: 'Tela cheia',
+				exitFullscreen: 'Sair da tela cheia',
+				frameTitle: 'Player de vídeo'
+			}
+		});
+	</script>
 </body>
 </html>
