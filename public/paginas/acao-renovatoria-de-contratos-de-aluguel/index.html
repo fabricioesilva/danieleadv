@@ -34,6 +34,7 @@
 
   <!-- Biblioteca de Animação AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 
   <link rel="stylesheet" type="text/css" href="../../static/style/style.css">
   
@@ -53,7 +54,7 @@
   </script>
 
 </head>
-<body>
+<body class="renovatoria-page">
 <div class="planoInicial">
     <!-- HEADER STICKY -->
     <header class="site-header">
@@ -77,6 +78,23 @@
       </div>
     </section>  
 </div>
+  <section class="video-guide-section" aria-labelledby="video-guide-title">
+    <div class="container video-guide-container">
+      <div class="video-guide-heading" data-aos="fade-up">
+        <span class="eyebrow">Orientação inicial</span>
+        <h2 id="video-guide-title">Antes de continuar, entenda os pontos principais.</h2>
+        <p>Assista ao vídeo para conhecer os cuidados essenciais sobre a Ação Renovatória e a proteção do ponto comercial.</p>
+      </div>
+      <div class="video-guide-player" data-aos="fade-up">
+        <video id="renovatoria-video" playsinline controls preload="metadata" aria-label="Vídeo sobre Ação Renovatória e proteção do ponto comercial">
+          <source src="media/vid-renovacao-aluguel.webm" type="video/webm">
+          <source src="media/vid-renovacao-aluguel.mp4" type="video/mp4">
+          Seu navegador não suporta a reprodução de vídeo.
+        </video>
+      </div>
+      <p class="video-guide-note">Para entender melhor seus direitos e as etapas do inventário, acesse o material gratuito preparado pela Dra. Daniele Torres Arguello – OAB/DF 78.217.</p>
+    </div>
+  </section>
   <main>
 
     <!-- CONTEÚDO PRINCIPAL -->
@@ -242,7 +260,24 @@
     </div>
   </a>
 
-  <!-- SCRIPTS DE ANIMAÇÃO -->
+  <!-- PLAYER E SCRIPTS DE ANIMAÇÃO -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    new Plyr('#renovatoria-video', {
+      controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+      i18n: {
+        play: 'Reproduzir',
+        pause: 'Pausar',
+        seek: 'Buscar',
+        volume: 'Volume',
+        mute: 'Silenciar',
+        unmute: 'Ativar som',
+        enterFullscreen: 'Tela cheia',
+        exitFullscreen: 'Sair da tela cheia',
+        frameTitle: 'Player de vídeo'
+      }
+    });
+  </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
